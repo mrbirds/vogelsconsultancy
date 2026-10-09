@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand tokens, derived from the Vogels Consultancy logo (see PRD §4). */
+  --brand-blue: #3fa9f5;
+  /* Darkened derivative of brand blue used for small text links on white,
+     chosen to clear WCAG AA (4.5:1) contrast — the raw brand blue only
+     reaches ~2.6:1 on white. */
+  --brand-blue-link: #1670af;
+  --ink: #0b0d10;
+  --ink-muted: #66707a;
+  --surface: #ffffff;
+  --surface-subtle: #f5f7f9;
+  --border: #dce3e8;
+  --surface-dark: #101820;
+}
+
+@theme inline {
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-link: var(--brand-blue-link);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-surface: var(--surface);
+  --color-surface-subtle: var(--surface-subtle);
+  --color-border: var(--border);
+  --color-surface-dark: var(--surface-dark);
+  --font-sans: var(--font-manrope);
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    background: var(--surface);
+    color: var(--ink);
+  }
+
+  ::selection {
+    background: var(--brand-blue);
+    color: var(--ink);
+  }
+
+  /* Visible focus ring for keyboard navigation (WCAG 2.2 AA). */
+  :focus-visible {
+    outline: 2px solid var(--brand-blue);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 100;
+    transition: top 0.2s ease;
+  }
+
+  .skip-link:focus {
+    top: 1rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .skip-link {
+      transition: none;
+    }
+  }
+}

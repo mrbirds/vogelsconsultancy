@@ -1,0 +1,186 @@
+/**
+ * Shared content shape for both locales. Keep `nl.ts` and `en.ts`
+ * semantically equivalent and structurally identical to this interface
+ * so a missing translation key is caught at compile time.
+ */
+
+export interface PageMeta {
+  title: string;
+  description: string;
+}
+
+export interface NavContent {
+  expertise: string;
+  experience: string;
+  about: string;
+  contact: string;
+  skipToContent: string;
+  menuOpen: string;
+  menuClose: string;
+  languageSwitchLabel: string;
+}
+
+export interface HeroContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  supportingLine: string;
+  ctaPrimary: string;
+  ctaSecondary: string;
+  photoAlt: string;
+}
+
+export interface CredibilityContent {
+  heading: string;
+  markers: string[];
+}
+
+export interface ExpertiseItem {
+  id: string;
+  title: string;
+  body: string;
+}
+
+export interface ExpertiseContent {
+  eyebrow: string;
+  heading: string;
+  /**
+   * Optional: the PRD only approves the eyebrow/heading copy for this
+   * section, so no intro paragraph is set by default. Add one in
+   * nl.ts/en.ts only if genuinely approved copy becomes available.
+   */
+  intro?: string;
+  items: ExpertiseItem[];
+}
+
+export interface ApproachPrinciple {
+  title: string;
+  body: string;
+}
+
+export interface ApproachContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  principles: ApproachPrinciple[];
+  closing: string;
+}
+
+export interface CompanyExperience {
+  id: string;
+  company: string;
+  role: string;
+  period: string;
+  homepageSummary: string;
+  /** Concise homepage bullets — maximum three, per PRD §31. */
+  homepageHighlights: string[];
+  webSummary: string;
+  /** Full bullet list shown on the Experience detail page. */
+  keyAreas: string[];
+  technology?: string;
+  quote?: string;
+}
+
+export interface ExperiencePeriodBlock {
+  period: string;
+  title: string;
+  body: string;
+}
+
+export interface ExperienceContent {
+  eyebrow: string;
+  heading: string;
+  /** See ExpertiseContent.intro — optional, no approved copy by default. */
+  intro?: string;
+  selectedHeading: string;
+  /** See ExpertiseContent.intro — optional, no approved copy by default. */
+  selectedIntro?: string;
+  companies: CompanyExperience[];
+  earlierHeading: string;
+  earlierIntro: string;
+  /** DearNova period — summarised compactly, not as a timeline. */
+  earlierExperience: ExperiencePeriodBlock;
+  /** Everything before DearNova — deliberately the least prominent block. */
+  careerFoundation: ExperiencePeriodBlock & {
+    /** Optional quiet role-progression line, e.g. "A → B → C". */
+    progression?: string[];
+  };
+  technologyHeading: string;
+  /** No approved copy for this section's intro paragraph; keep optional. */
+  technologyIntro?: string;
+  technologyList: string[];
+  viewAllCta: string;
+}
+
+export interface AboutContent {
+  eyebrow: string;
+  heading: string;
+  paragraphs: string[];
+  factsHeading: string;
+  facts: string[];
+  photoAlt: string;
+  previewHeading: string;
+  previewIntro: string;
+  previewCta: string;
+}
+
+export interface ContactContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  emailLabel: string;
+  linkedinLabel: string;
+  locationLabel: string;
+  ctaEmail: string;
+  ctaLinkedin: string;
+}
+
+export interface FooterContent {
+  tagline: string;
+  privacy: string;
+  rightsReserved: (year: number) => string;
+}
+
+export interface PrivacyContent {
+  heading: string;
+  intro: string;
+  sections: { heading: string; body: string[] }[];
+}
+
+export interface CookieConsentContent {
+  message: string;
+  acceptAll: string;
+  rejectAll: string;
+  settingsLink: string;
+}
+
+export interface NotFoundContent {
+  heading: string;
+  body: string;
+  cta: string;
+}
+
+export interface Content {
+  locale: "nl" | "en";
+  htmlLang: string;
+  meta: {
+    home: PageMeta;
+    expertise: PageMeta;
+    experience: PageMeta;
+    about: PageMeta;
+    contact: PageMeta;
+    privacy: PageMeta;
+  };
+  nav: NavContent;
+  hero: HeroContent;
+  credibility: CredibilityContent;
+  expertise: ExpertiseContent;
+  approach: ApproachContent;
+  experience: ExperienceContent;
+  about: AboutContent;
+  contact: ContactContent;
+  footer: FooterContent;
+  privacy: PrivacyContent;
+  cookieConsent: CookieConsentContent;
+  notFound: NotFoundContent;
+}
