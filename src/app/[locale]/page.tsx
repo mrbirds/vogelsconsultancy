@@ -8,7 +8,6 @@ import { CredibilityMarkers } from "@/components/CredibilityMarkers";
 import { ExpertiseGrid } from "@/components/ExpertiseGrid";
 import { Approach } from "@/components/Approach";
 import { SelectedExperience } from "@/components/SelectedExperience";
-import { AboutPreview } from "@/components/AboutPreview";
 import { ContactCTA } from "@/components/ContactCTA";
 
 export async function generateMetadata({
@@ -37,9 +36,8 @@ export default async function HomePage({
       <Hero locale={locale} content={content.hero} />
       <CredibilityMarkers content={content.credibility} />
       <ExpertiseGrid content={content.expertise} />
-      <Approach content={content.approach} />
       <SelectedExperience locale={locale} content={content.experience} />
-      <AboutPreview locale={locale} content={content.about} />
+      <Approach content={content.approach} />
       <ContactCTA content={content.contact} locale={locale} />
     </>
   );

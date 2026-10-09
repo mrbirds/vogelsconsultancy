@@ -2,7 +2,7 @@
 date: 2026-10-09
 language: nl-NL
 title: PRD --- Vogels Consultancy website
-version: 3.0
+version: 3.4
 ---
 
 # PRD --- Vogels Consultancy website
@@ -1136,3 +1136,225 @@ Create semantically equivalent English copy and preserve the same hierarchy and 
 
 ## DELA detail
 Any deeper DELA evidence belongs within the DELA case on the full Experience page. It may cover selected evidence such as platform modernisation, CI/CD, Infrastructure-as-Code, observability, identity/compliance, CMS/platform evaluation and practical Generative AI. Never place this content after Freo as a separate unrelated block.
+
+
+# 32. Visual redesign & content refinement — v3.4
+
+This section supersedes any conflicting earlier visual/layout instructions.
+
+## 32.1 Design objective
+
+The site must feel like a senior independent technology consultancy: calm, premium, technically credible and concise. It must not look like a personal CV/portfolio or a generic freelancer template.
+
+Use a restrained consultancy aesthetic:
+- predominantly white background;
+- near-black typography;
+- the blue from the Vogels Consultancy brand as the primary accent;
+- generous whitespace;
+- strong typography and clear hierarchy;
+- minimal decorative effects;
+- no oversized gradients, glassmorphism, decorative blobs or unnecessary animation.
+
+The homepage must sell Robin's expertise and value first. His portrait is supporting material, not the hero.
+
+## 32.2 Header / Vogels Consultancy logo
+
+The current Vogels Consultancy logo is visually too small relative to the navigation.
+
+Requirements:
+- Increase the rendered brand logo by approximately 30–40% from the current implementation.
+- Preserve its original proportions.
+- Do not add a separate `Vogels Consultancy` text label next to it when the name is already present in the logo.
+- Give it enough whitespace so it remains premium rather than cramped.
+- Ensure the logo remains clearly legible on mobile.
+- Do not crop, distort or recolour it.
+
+The brand logo should have more visual authority than it has in the current implementation without turning the header into a large banner.
+
+## 32.3 Portrait usage
+
+The portrait must NOT appear in the homepage hero.
+
+The portrait may appear exactly once on the public website:
+- on the About / Over mij page.
+
+Remove any second instance elsewhere, including homepage, experience page, CTA sections or footer.
+
+On the About page, use the portrait as supporting content alongside the personal/professional story. It should not dominate the page.
+
+## 32.4 Homepage structure
+
+Use this order:
+
+1. Header/navigation
+2. Hero — no portrait
+3. Compact credibility line
+4. Expertise
+5. Selected experience
+6. Approach
+7. Contact CTA
+8. Footer
+
+### Hero
+
+Use a typography-led hero with substantial whitespace.
+
+Dutch direction:
+
+**Technisch leiderschap dat organisaties verder brengt.**
+
+Ik help organisaties hun digitale platformen te moderniseren, complexe technologiekeuzes te maken en engineeringteams structureel te versterken. Van strategie en architectuur tot de daadwerkelijke uitvoering.
+
+Primary CTA: `Bekijk mijn expertise`
+Secondary CTA: `Neem contact op`
+
+Do not place Robin's portrait next to this copy.
+
+Below the hero, use one restrained credibility line rather than four competing claims:
+
+`20+ jaar ervaring · Technology Leadership · Solution Architecture · Engineering Excellence`
+
+English should be semantically equivalent and natural, not a literal word-for-word translation.
+
+## 32.5 Expertise — reduce from six to four
+
+The homepage must show four core expertise areas, not six:
+
+1. **Technology & Engineering Leadership**
+   Direction for technology, engineering organisations and multidisciplinary teams.
+
+2. **Solution Architecture**
+   Turning complex technology choices into clear, maintainable and future-ready architecture.
+
+3. **Platform Modernisation**
+   Modernising legacy and digital platforms, APIs, cloud architecture and delivery foundations.
+
+4. **Engineering Excellence**
+   Improving software quality, CI/CD, observability, maintainability, security and engineering practices.
+
+`Teams & Engineering Capability` and `Technology Advisory` are not separate homepage pillars. Their relevant content should be incorporated naturally into the four areas above.
+
+Keep each expertise item concise. Avoid long capability inventories.
+
+## 32.6 Selected experience
+
+Keep DELA, Essent and Freo as the three selected cases.
+
+For each:
+- logo;
+- period;
+- role;
+- one concise paragraph;
+- maximum three evidence/result-oriented highlights.
+
+Do not repeat the company name directly below a logo.
+
+Prefer outcomes/evidence over generic responsibilities where the source material supports them.
+
+### DELA
+
+The standalone `Aanvullende context bij DELA` block must not exist.
+
+Relevant DELA evidence belongs inside the DELA case on the full Experience page. The homepage version remains concise.
+
+The DELA logo must use the supplied asset `dela-logo.png` from this package as the single source of truth.
+
+Important:
+- show the complete logo;
+- `object-fit: contain`;
+- no crop;
+- no clipping;
+- no `object-fit: cover`;
+- no CSS mask;
+- no recreation of the logo in text/SVG/CSS;
+- preserve transparent background and original colour.
+
+Delete/stop using any older DELA logo asset in the site.
+
+### Logo normalization
+
+DELA, Essent and Freo must have comparable **perceived visual weight**, not blindly identical image heights.
+
+Use an equal logo stage, approximately 180×64px desktop, and tune the contained image dimensions per logo when necessary. Preserve aspect ratio. Never stretch or crop.
+
+## 32.7 Earlier career
+
+Keep the v3.3 hierarchy:
+- DearNova is secondary and compact.
+- Pre-DearNova career is one concise career-foundation block.
+- Do not turn the page into a LinkedIn timeline.
+- Do not add employer/client logo rows to the earlier-career section.
+- Do not make EAGE, VZVZ, Achmea, Atos Origin, Interpolis or Netaspect visually compete with DELA/Essent/Freo.
+
+## 32.8 About / Over mij
+
+The About page is the only page with Robin's portrait.
+
+Keep the professional progression from software engineering to architecture and technology leadership, but make the page slightly more personal without becoming informal.
+
+Include the motivation behind the work, along the lines of:
+
+`Wat mij energie geeft, is het verbinden van mensen, technologie en ambities. Complexe vraagstukken terugbrengen tot heldere keuzes, teams helpen groeien en vervolgens zien dat verbeteringen daadwerkelijk resultaat opleveren.`
+
+Also communicate experience in complex organisations and stakeholder environments.
+
+Avoid repeating the complete Experience page.
+
+## 32.9 Dutch editorial style
+
+The Dutch site must read as native Dutch, not as an English consultancy site translated into Dutch.
+
+Keep internationally established discipline names where they add value, especially in headings such as `Technology & Engineering Leadership`, `Solution Architecture` and `Engineering Excellence`.
+
+In running Dutch copy, prefer natural Dutch wording. Avoid unnecessary hybrids such as:
+- `deliveryverantwoordelijkheid`;
+- `engineering improvement`;
+- `independently deploybare services`;
+- `recruitment` when `werving` is sufficient.
+
+Do not translate technical terms such as CI/CD merely for the sake of translating them.
+
+## 32.10 Contact proposition
+
+Make it immediately clear that Vogels Consultancy provides independent consultancy/interim expertise.
+
+Use a concise CTA that gives a concrete reason to make contact.
+
+Dutch direction:
+
+**Technische uitdagingen die om richting en ervaring vragen?**
+
+Of het nu gaat om platformmodernisering, complexe architectuurkeuzes of het versterken van engineeringteams: ik denk graag mee over een passende aanpak.
+
+Do not use aggressive sales language.
+
+## 32.11 Visual consistency / responsive acceptance criteria
+
+Before considering the update complete, visually inspect at least:
+- desktop around 1440px;
+- tablet around 768px;
+- mobile around 390px.
+
+Check:
+- header logo is clearly legible and not undersized;
+- no portrait on homepage;
+- portrait occurs only once site-wide;
+- DELA logo is complete and uncropped;
+- DELA/Essent/Freo have comparable visual weight;
+- no duplicated organisation names immediately below logos;
+- no horizontal scrolling;
+- no awkward text wrapping in headings;
+- cards/columns have consistent spacing;
+- mobile page does not become an excessive sequence of long text blocks;
+- focus states and contrast remain accessible.
+
+Run the production build after the visual review.
+
+## 32.12 Do not overbuild
+
+Do not redesign the site into an agency website and do not introduce unnecessary animation or decorative UI.
+
+The desired impression is:
+`senior technology leadership + strong engineering depth + calm confidence`.
+
+The site should become shorter and clearer rather than gaining more content.

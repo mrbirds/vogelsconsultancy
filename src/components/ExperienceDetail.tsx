@@ -8,15 +8,15 @@ export function ExperienceDetail({ company }: { company: CompanyExperience }) {
   return (
     <article id={company.id} className="scroll-mt-28 border-t border-border py-10 first:border-t-0 first:pt-0">
       {logo ? (
-        <div className="mb-5 flex h-12 max-w-[180px] items-start sm:h-16">
+        <div className="relative mb-5 flex h-16 w-[180px] shrink-0 items-center justify-center">
           <ClientLogoMark logo={logo} className={primaryLogoClassName(company.id)} />
         </div>
       ) : null}
+      <h3 className="sr-only">{company.company}</h3>
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <h3 className="text-2xl font-semibold text-ink">{company.company}</h3>
+        <p className="text-[15px] font-medium text-brand-blue-link">{company.role}</p>
         <p className="text-sm font-medium text-ink-muted">{company.period}</p>
       </div>
-      <p className="mt-1 text-[15px] font-medium text-brand-blue-link">{company.role}</p>
       <p className="mt-5 max-w-3xl leading-relaxed text-ink-muted">{company.webSummary}</p>
 
       <ul className="mt-6 grid gap-x-8 gap-y-2 text-[15px] text-ink sm:grid-cols-2">
@@ -43,4 +43,3 @@ export function ExperienceDetail({ company }: { company: CompanyExperience }) {
     </article>
   );
 }
-

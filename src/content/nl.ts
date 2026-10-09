@@ -7,12 +7,12 @@ export const nl: Content = {
     home: {
       title: "Robin Vogels | Technology & Engineering Leadership | Vogels Consultancy",
       description:
-        "Technisch leiderschap dat strategie, architectuur en engineering verbindt. Robin Vogels helpt organisaties met technology leadership, solution architecture, platformmodernisering en engineering excellence.",
+        "Technisch leiderschap dat organisaties verder brengt. Onafhankelijke expertise in solution architecture, platformmodernisering en sterke engineeringteams.",
     },
     expertise: {
       title: "Expertise | Vogels Consultancy",
       description:
-        "Technology & engineering leadership, solution architecture, platformmodernisering, engineering excellence, teams en technology advisory.",
+        "Technology & Engineering Leadership, Solution Architecture, Platform Modernisation en Engineering Excellence.",
     },
     experience: {
       title: "Ervaring | Vogels Consultancy",
@@ -22,12 +22,12 @@ export const nl: Content = {
     about: {
       title: "Over mij | Vogels Consultancy",
       description:
-        "Van software engineering naar technology leadership: de achtergrond, werkwijze en leiderschapsstijl van Robin Vogels.",
+        "De loopbaan en werkwijze van Robin Vogels: van softwareontwikkeling en architectuur naar technisch leiderschap.",
     },
     contact: {
       title: "Contact | Vogels Consultancy",
       description:
-        "Neem contact op met Robin Vogels voor technology leadership, solution architecture, platformmodernisering of engineering improvement.",
+        "Neem contact op met Robin Vogels voor onafhankelijk technisch advies en interimexpertise in technologie en engineering.",
     },
     privacy: {
       title: "Privacy | Vogels Consultancy",
@@ -42,28 +42,19 @@ export const nl: Content = {
     skipToContent: "Ga naar inhoud",
     menuOpen: "Open menu",
     menuClose: "Sluit menu",
-    languageSwitchLabel: "Switch to English",
+    languageSwitchLabel: "Schakel naar het Engels",
   },
   hero: {
-    eyebrow: "Technology & Engineering Leadership",
-    heading:
-      "Technisch leiderschap dat strategie, architectuur en engineering verbindt.",
+    eyebrow: "Onafhankelijk technisch leiderschap",
+    heading: "Technisch leiderschap dat organisaties verder brengt.",
     intro:
-      "Ik help organisaties richting te geven aan complexe digitale omgevingen en hun engineering structureel te verbeteren. Van technologiestrategie en solution architecture tot platformmodernisering, engineering excellence en het versterken van teams.",
-    supportingLine:
-      "Ruim 20 jaar ervaring in software engineering. Meer dan 10 jaar in technisch leiderschap.",
-    ctaPrimary: "Kennismaken",
-    ctaSecondary: "Bekijk mijn ervaring",
-    photoAlt: "Portretfoto van Robin Vogels",
+      "Ik help organisaties hun digitale platforms te moderniseren, complexe technologiekeuzes te maken en engineeringteams structureel te versterken. Van strategie en architectuur tot de daadwerkelijke uitvoering.",
+    ctaPrimary: "Bekijk mijn expertise",
+    ctaSecondary: "Neem contact op",
   },
   credibility: {
-    heading: "In het kort",
-    markers: [
-      "20+ jaar software engineering",
-      "10+ jaar technisch leiderschap",
-      "Leiderschap over multidisciplinaire engineeringteams",
-      "Strategie tot hands-on technische diepgang",
-    ],
+    label: "Ervaring en expertise",
+    line: "20+ jaar ervaring · Technology Leadership · Solution Architecture · Engineering Excellence",
   },
   expertise: {
     eyebrow: "Expertise",
@@ -72,32 +63,22 @@ export const nl: Content = {
       {
         id: "leadership",
         title: "Technology & Engineering Leadership",
-        body: "Richting geven aan technologie en engineering over teams heen. Ik help organisaties technische keuzes, architectuur, engineeringstandaarden en productambities bij elkaar te brengen en creëer duidelijkheid waar meerdere teams en stakeholders samenkomen.",
+        body: "Ik geef richting aan technologie en engineering en breng productambities, teams en betrokkenen samen. Daarbij help ik technische leiders en engineers groeien.",
       },
       {
         id: "architecture",
-        title: "Solution Architecture & Digital Platforms",
-        body: "Complexe digitale landschappen terugbrengen tot heldere, duurzame keuzes. Van web- en API-architectuur tot cloudplatformen, integraties, identity en de modernisering van legacy.",
+        title: "Solution Architecture",
+        body: "Ik vertaal complexe vraagstukken naar heldere, onderhoudbare architectuurkeuzes voor digitale platforms, API's, cloud en integraties.",
       },
       {
         id: "modernisation",
         title: "Platform Modernisation",
-        body: "Moderniseren zonder de continuïteit uit het oog te verliezen. Ik help organisaties evolueren van legacy en monolithische oplossingen naar beter schaalbare, onafhankelijk deploybare en beheersbare digitale services.",
+        body: "Ik help verouderde platforms en applicaties stap voor stap moderniseren, met oog voor continuïteit, schaalbaarheid en een haalbare route.",
       },
       {
         id: "engineering-excellence",
         title: "Engineering Excellence",
-        body: "Engineeringkwaliteit structureel verbeteren via CI/CD, testautomatisering, observability, Infrastructure-as-Code, security, technische standaarden en aandacht voor technical debt.",
-      },
-      {
-        id: "teams",
-        title: "Teams & Engineering Capability",
-        body: "Sterkere engineeringteams bouwen door duidelijke richting, coaching, eigenaarschap, recruitment en het ontwikkelen van technische leiders en engineers.",
-      },
-      {
-        id: "advisory",
-        title: "Technology Advisory",
-        body: "Product Owners, business stakeholders en management helpen om ambities te vertalen naar haalbare technische keuzes, roadmaps en investeringen — inclusief leveranciers- en platformselectie, security en compliance.",
+        body: "Ik versterk softwarekwaliteit en vakmanschap met passende CI/CD, testautomatisering, observability, beveiliging en onderhoudbare werkwijzen.",
       },
     ],
   },
@@ -105,11 +86,11 @@ export const nl: Content = {
     eyebrow: "Mijn aanpak",
     heading: "Duidelijke richting. Vertrouwen in teams. Technisch dichtbij.",
     intro:
-      "Ik geloof dat sterke engineering begint met duidelijkheid: waar willen we naartoe, waarom is dat belangrijk en welke keuzes horen daarbij? Vanuit die richting geef ik teams ruimte om beslissingen te nemen en verantwoordelijkheid te pakken. Tegelijk blijf ik technisch dichtbij genoeg om complexe keuzes te doorgronden en mee te helpen wanneer dat waarde toevoegt.",
+      "Sterke engineering begint met duidelijkheid: waar willen we naartoe, waarom is dat belangrijk en welke keuzes horen daarbij? Vanuit die richting geef ik teams ruimte om beslissingen te nemen en verantwoordelijkheid te dragen. Tegelijk blijf ik dicht genoeg bij de techniek om complexe keuzes te doorgronden en mee te helpen waar dat waarde toevoegt.",
     principles: [
       {
         title: "Begrijpen",
-        body: "Eerst de context begrijpen: businessdoelen, productambities, architectuur, teams, afhankelijkheden en de knelpunten die verbetering in de weg staan.",
+        body: "Eerst de context begrijpen: organisatiedoelen, productambities, architectuur, teams, afhankelijkheden en de knelpunten die verbetering in de weg staan.",
       },
       {
         title: "Richting geven",
@@ -121,7 +102,7 @@ export const nl: Content = {
       },
       {
         title: "Samen verbeteren",
-        body: "Niet vanaf de zijlijn adviseren. Ik werk met engineers, Product Owners, architecten, business en partners om verbeteringen daadwerkelijk te realiseren en kennis duurzaam in de organisatie te verankeren.",
+        body: "Niet vanaf de zijlijn adviseren. Ik werk met engineers, Product Owners, architecten, vertegenwoordigers uit de organisatie en partners om verbeteringen daadwerkelijk door te voeren en kennis duurzaam te verankeren.",
       },
     ],
     closing: "Strategisch waar het nodig is. Technisch dichtbij waar het helpt.",
@@ -137,26 +118,21 @@ export const nl: Content = {
         role: "Technology & Engineering Lead / Solution Architect",
         period: "2021 — heden",
         homepageSummary:
-          "Technisch leiderschap voor het online domein van DELA, met verantwoordelijkheid voor drie multidisciplinaire teams van circa 18 professionals en de technische ontwikkeling van klantgerichte digitale platformen.",
+          "Technisch leiderschap voor drie multidisciplinaire teams (circa 18 professionals) en de doorontwikkeling van klantgerichte digitale platforms.",
         homepageHighlights: [
-          "Technologiestrategie & architectuur",
-          "Engineering leadership & capability",
-          "Platformmodernisering & engineering excellence",
+          "Van tweewekelijkse releases naar meerdere uitrolmomenten per dag.",
+          "Modernisering van Sitecore/MVC naar web-, API- en Azure-architectuur.",
+          "Technische koers voor drie teams in een gereguleerde omgeving.",
         ],
         webSummary:
-          "Technisch leiderschap voor het online domein van DELA, met verantwoordelijkheid voor drie multidisciplinaire teams van circa 18 professionals en de technische ontwikkeling van klantgerichte digitale platformen.",
+          "Verantwoordelijk voor de technische koers en doorontwikkeling van DELA's online omgeving. Ik gaf leiding aan drie multidisciplinaire teams van circa 18 professionals en verbond productambities met duurzame architectuurkeuzes.",
         keyAreas: [
-          "Technologiestrategie & architectuur: technologiestrategie, architectuur en engineeringstandaarden binnen het online domein, met vertaling van businessambities en productroadmaps naar duurzame technische keuzes.",
-          "Engineering leadership & capability: leiderschap over drie multidisciplinaire teams samen met Product Owners en Scrum Masters, inclusief recruitment en ontwikkeling van engineeringcapaciteit.",
-          "Platformmodernisering & engineering excellence: modernisering richting onafhankelijk deploybare digitale services en structurele verbetering van CI/CD, kwaliteit, observability, security en technical debt.",
-          "Business, partners, security & compliance: samenwerking met business owners, marketing, architectuur, security en technologiepartners, inclusief technologie- en leveranciersselectie en delivery binnen een gereguleerde omgeving.",
-          "Future-state modernisering van Sitecore/MVC naar moderne web-, API- en Azure-architecturen.",
-          "CI/CD-ontwikkeling van tweewekelijkse releases naar meerdere deployments per dag.",
-          "Infrastructure-as-Code.",
-          "Dynatrace en Application Insights.",
-          "iDIN, eHerkenning, WWFT en EAA.",
-          "Selectie en evaluatie van een nieuw CMS-platform.",
-          "Generative AI in development, code reviews, prototyping en tooling.",
+          "Technologiestrategie, architectuur en technische standaarden voor het online domein; productambities vertaald naar duurzame keuzes.",
+          "Leiding aan drie multidisciplinaire teams met Product Owners en Scrum Masters; werving en ontwikkeling van technische capaciteit.",
+          "Modernisering van Sitecore/MVC naar moderne web-, API- en Azure-architectuur.",
+          "CI/CD verbeterd van tweewekelijkse releases naar meerdere uitrolmomenten per dag; inzet van Infrastructure-as-Code, Dynatrace en Application Insights.",
+          "Samenwerking met de organisatie, marketing, architectuur, informatiebeveiliging en technologiepartners rond selectie en naleving van regelgeving.",
+          "Ervaring met iDIN, eHerkenning, Wwft en EAA; verkenning van een nieuw CMS en generatieve AI voor ontwikkeling en prototyping.",
         ],
         quote:
           "Duidelijke richting, vertrouwen en eigenaarschap: teams presteren het beste wanneer mensen begrijpen waar ze naartoe werken, ruimte krijgen om beslissingen te nemen en verantwoordelijkheid dragen voor het resultaat.",
@@ -167,22 +143,22 @@ export const nl: Content = {
         role: "Lead Consultant",
         period: "Jun 2020 — Apr 2022",
         homepageSummary:
-          "Verantwoordelijk voor architectuur, modernisering en technische kwaliteit van het online platform van Essent, met een beweging naar een modernere headless architectuur.",
+          "Architectuur en modernisering van het online platform, met een overgang naar een headless architectuur en een upgrade van Sitecore 9.3 naar 10.1.",
         homepageHighlights: [
-          "Solution architecture en technische richting.",
-          "Modernisering richting een headless architectuur.",
-          "Migratie van Sitecore 9.3 naar 10.1.",
+          "Technische koers voor het online platform.",
+          "Overgang naar een headless architectuur.",
+          "Upgrade van Sitecore 9.3 naar 10.1.",
         ],
         webSummary:
-          "Verantwoordelijk voor architectuur, modernisering en technische kwaliteit van het online platform van Essent. Combineerde solution architecture met hands-on engineering en technische begeleiding van het developmentteam, met focus op stabiliteit, performance, softwarekwaliteit en de beweging naar een modernere headless architectuur.",
+          "Verantwoordelijk voor architectuur, modernisering en technische kwaliteit van het online platform. Combineerde solution architecture met actief meewerken aan de techniek en begeleiding van het ontwikkelteam. Focus op stabiliteit, prestaties, softwarekwaliteit en de overgang naar een modernere headless architectuur.",
         keyAreas: [
           "Solution architecture en technische richting.",
           "Modernisering richting een headless architectuur.",
           "Migratie van Sitecore 9.3 naar 10.1.",
-          "Platformstabiliteit, performance en softwarekwaliteit.",
+          "Platformstabiliteit, prestaties en softwarekwaliteit.",
           "CI/CD en testautomatisering.",
           "Technische begeleiding en ondersteuning van developers.",
-          "Hands-on softwareontwikkeling waar nodig.",
+          "Zelf software ontwikkelen waar dat nodig was.",
         ],
         technology: ".NET / C#, Sitecore, Azure, Angular, CI/CD, testautomatisering",
       },
@@ -192,17 +168,17 @@ export const nl: Content = {
         role: "Senior Team Lead",
         period: "Feb 2019 — Jun 2020",
         homepageSummary:
-          "Verantwoordelijk voor de ontwikkeling en technische evolutie van freo.nl, met focus op modernisering, softwarekwaliteit en geautomatiseerde delivery.",
+          "Doorontwikkeling van freo.nl met aandacht voor modernisering, softwarekwaliteit en geautomatiseerde releases.",
         homepageHighlights: [
-          "Ontwikkeling en modernisering van freo.nl.",
-          "Technische begeleiding binnen het developmentteam.",
-          "CI/CD en testautomatisering.",
+          "Modernisering van het platform en de ontwikkelwerkwijze.",
+          "CI/CD en geautomatiseerde tests.",
+          "Technische begeleiding van het team.",
         ],
         webSummary:
-          "Verantwoordelijk voor de ontwikkeling en technische evolutie van freo.nl, waarbij software engineering werd gecombineerd met technisch leiderschap en deliveryverantwoordelijkheid. Focus op modernisering, softwarekwaliteit, geautomatiseerde delivery en onderhoudbaarheid.",
+          "Verantwoordelijk voor de ontwikkeling en technische doorontwikkeling van freo.nl. De rol combineerde softwareontwikkeling met technisch leiderschap, met aandacht voor kwaliteit, geautomatiseerde releases en onderhoudbaarheid.",
         keyAreas: [
           "Ontwikkeling en modernisering van freo.nl.",
-          "Technische begeleiding binnen het developmentteam.",
+          "Technische begeleiding van het ontwikkelteam.",
           "CI/CD en testautomatisering.",
           "Personalisatie en digitale klantervaring.",
           "Softwarekwaliteit en onderhoudbaarheid.",
@@ -213,17 +189,16 @@ export const nl: Content = {
     ],
     earlierHeading: "Eerdere ervaring",
     earlierIntro:
-      "Voorafgaand aan mijn huidige opdrachten werkte ik in verschillende lead-, architectuur- en deliveryrollen aan digitale platformen en softwareontwikkeling.",
+      "Voorafgaand aan mijn huidige opdrachten werkte ik in leidinggevende, architectuur- en projectrollen aan digitale platforms en softwareontwikkeling.",
     earlierExperience: {
       period: "2014–2019",
-      title: "DearNova — Technical leadership & project delivery",
-      body: "Werkte als Senior Team Lead en Project Manager en vervulde technische leadrollen bij onder andere DELA, EAGE en VZVZ. In deze periode verschoof mijn focus steeds verder van softwareontwikkeling naar technisch leiderschap, architectuur, teambegeleiding en delivery.",
+      title: "DearNova — technisch leiderschap en projectbegeleiding",
+      body: "Als Senior Team Lead en Project Manager vervulde ik ook technische leidinggevende rollen bij onder meer DELA, EAGE en VZVZ. Mijn werk verschoof in deze periode van softwareontwikkeling naar technisch leiderschap, architectuur en teambegeleiding.",
     },
     careerFoundation: {
       period: "2001–2014",
-      title: "Fundament in software engineering en architectuur",
-      body: "Begonnen als Software Engineer bij Netaspect en vervolgens doorgegroeid via Lead Software Engineer en Lead Software Architect naar Project Manager. In deze periode werkte ik bij en voor organisaties als Atos Origin, Interpolis en Achmea.",
-      progression: ["Software Engineer", "Lead Software Engineer", "Lead Software Architect", "Project Manager"],
+      title: "Basis in softwareontwikkeling en architectuur",
+      body: "Ik begon als softwareontwikkelaar en groeide door naar architectuur en projectleiding. Bij Netaspect, Atos Origin, Interpolis en Achmea bouwde ik een brede basis op in softwareontwikkeling en complexe organisaties.",
     },
     technologyHeading: "Technologie",
     technologyList: [
@@ -245,32 +220,27 @@ export const nl: Content = {
   },
   about: {
     eyebrow: "Over mij",
-    heading: "Van software engineering naar technology leadership",
+    heading: "Van softwareontwikkelaar naar technisch leider",
     paragraphs: [
-      "Ik ben Robin Vogels, technology & engineering leader met ruim 20 jaar ervaring in software engineering en meer dan 10 jaar in technisch leiderschap.",
-      "Mijn loopbaan begon dicht op de techniek, als software engineer en later solution architect. In de loop der jaren is mijn verantwoordelijkheid verbreed naar het leiden van teams, het bepalen van technische richting en het verbeteren van engineering binnen complexe digitale omgevingen.",
-      "Ik werk graag op het snijvlak van technologie, product en business. Dat betekent dat ik met engineers en architecten de diepte in kan, maar net zo gemakkelijk met Product Owners, business stakeholders en management werk aan keuzes, prioriteiten en roadmaps.",
-      "Mijn leiderschapsstijl draait om duidelijke richting, vertrouwen en eigenaarschap. Ik geloof dat sterke teams het beste presteren wanneer mensen begrijpen waar ze naartoe werken, ruimte krijgen om beslissingen te nemen en verantwoordelijkheid kunnen nemen voor het resultaat.",
-      "Doordat ik jarenlang zelf software heb gebouwd, blijf ik graag dicht genoeg bij de techniek om keuzes echt te begrijpen. Ik voel me het meest thuis in omgevingen waar technologie belangrijk is voor de business, waar betekenisvolle complexiteit bestaat en waar de ambitie is om zowel het product als de engineeringorganisatie beter te maken.",
+      "Ik ben Robin Vogels. In ruim twintig jaar groeide ik van softwareontwikkelaar en solution architect naar technisch leider; inmiddels heb ik meer dan tien jaar ervaring met het richting geven aan teams en technologie.",
+      "Ik werk graag in complexe organisaties, waar verschillende belangen en afhankelijkheden samenkomen. Daar verbind ik technologie, product en bedrijfsdoelen en help ik teams en betrokkenen om tot heldere keuzes te komen.",
+      "Wat mij energie geeft, is het verbinden van mensen, technologie en ambities. Complexe vraagstukken terugbrengen tot heldere keuzes, teams helpen groeien en vervolgens zien dat verbeteringen daadwerkelijk resultaat opleveren.",
+      "Omdat ik zelf jarenlang software heb ontwikkeld, blijf ik graag dicht bij de techniek. Ik geef richting en vertrouwen, en help teams verantwoordelijkheid te nemen voor resultaat dat ook op de lange termijn standhoudt.",
     ],
     factsHeading: "Kort",
     facts: [
       "Rosmalen, Nederland",
       "Hogere Informatica — Fontys Hogescholen",
       "Professional Scrum Master I",
-      "Nederlands / English",
+      "Nederlands / Engels",
     ],
     photoAlt: "Portretfoto van Robin Vogels",
-    previewHeading: "Over Robin",
-    previewIntro:
-      "Ik ben Robin Vogels, technology & engineering leader met ruim 20 jaar ervaring in software engineering en meer dan 10 jaar in technisch leiderschap.",
-    previewCta: "Lees meer over Robin",
   },
   contact: {
     eyebrow: "Contact",
-    heading: "Een technisch vraagstuk of behoefte aan ervaren technology leadership?",
+    heading: "Technische uitdagingen die om richting en ervaring vragen?",
     intro:
-      "Neem gerust contact op voor een kennismaking over technology leadership, solution architecture, platformmodernisering of engineering improvement.",
+      "Of het nu gaat om platformmodernisering, complexe architectuurkeuzes of het versterken van engineeringteams: ik denk graag mee over een passende aanpak. Vogels Consultancy biedt onafhankelijk advies en tijdelijke expertise.",
     emailLabel: "E-mail",
     linkedinLabel: "LinkedIn",
     locationLabel: "Locatie",
@@ -278,7 +248,7 @@ export const nl: Content = {
     ctaLinkedin: "Bekijk LinkedIn",
   },
   footer: {
-    tagline: "Independent Technology Consultant",
+    tagline: "Onafhankelijk adviseur voor technologie",
     privacy: "Privacy",
     rightsReserved: (year: number) => `© ${year} Vogels Consultancy. Alle rechten voorbehouden.`,
   },
@@ -294,10 +264,10 @@ export const nl: Content = {
         ],
       },
       {
-        heading: "Analytics en cookies",
+        heading: "Bezoekstatistieken en cookies",
         body: [
-          "Deze website gebruikt alleen analytics wanneer dat expliciet is geconfigureerd en pas nadat je daarvoor toestemming hebt gegeven. Zonder toestemming worden er geen analytische of marketingcookies geplaatst.",
-          "Wanneer analytics actief is, wordt gebruikgemaakt van Google Analytics 4 met Google Consent Mode v2 en privacyvriendelijke standaardinstellingen. Je kunt je voorkeur op elk moment wijzigen.",
+          "Deze website verzamelt alleen bezoekstatistieken wanneer dat expliciet is ingesteld en nadat je daarvoor toestemming hebt gegeven. Zonder toestemming worden er geen analytische of marketingcookies geplaatst.",
+          "Als bezoekstatistieken zijn ingeschakeld, gebeurt dat met Google Analytics 4 en Google Consent Mode v2, met privacyvriendelijke standaardinstellingen. Je kunt je voorkeur op elk moment wijzigen.",
         ],
       },
       {
@@ -310,7 +280,7 @@ export const nl: Content = {
   },
   cookieConsent: {
     message:
-      "Deze website gebruikt alleen analytics met jouw toestemming. Zonder toestemming worden er geen analytische cookies geplaatst.",
+      "Deze website verzamelt alleen bezoekstatistieken met jouw toestemming. Zonder toestemming worden er geen analytische cookies geplaatst.",
     acceptAll: "Accepteren",
     rejectAll: "Weigeren",
     settingsLink: "Meer informatie",

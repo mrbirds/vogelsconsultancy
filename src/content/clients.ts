@@ -29,9 +29,9 @@ export const clientLogos: ClientLogo[] = [
     id: "dela",
     name: "DELA",
     tier: "primary",
-    logoFile: "/images/clients/dela.png",
-    width: 3000,
-    height: 3000,
+    logoFile: "/images/clients/dela-logo.png",
+    width: 3500,
+    height: 1057,
   },
   {
     id: "essent",

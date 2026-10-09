@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { nl } from "@/content/nl";
 import { en } from "@/content/en";
+import { clientLogos } from "@/content/clients";
 
 /**
  * Walks two objects and asserts they expose the same set of keys at every
@@ -39,10 +40,38 @@ describe("content parity between nl and en", () => {
     expect(en.expertise.items.length).toBe(nl.expertise.items.length);
   });
 
+  it("uses the four approved expertise areas", () => {
+    const titles = [
+      "Technology & Engineering Leadership",
+      "Solution Architecture",
+      "Platform Modernisation",
+      "Engineering Excellence",
+    ];
+    expect(en.expertise.items.map((item) => item.title)).toEqual(titles);
+    expect(nl.expertise.items.map((item) => item.title)).toEqual(titles);
+  });
+
   it("has the same number of selected experience companies", () => {
     expect(en.experience.companies.length).toBe(nl.experience.companies.length);
     expect(en.experience.companies.map((c) => c.id)).toEqual(
       nl.experience.companies.map((c) => c.id),
+    );
+  });
+
+  it("keeps the three homepage cases concise and uses the authoritative DELA logo", () => {
+    expect(nl.experience.companies.map((company) => company.id)).toEqual([
+      "dela",
+      "essent",
+      "freo",
+    ]);
+    expect(
+      nl.experience.companies.every((company) => company.homepageHighlights.length <= 3),
+    ).toBe(true);
+    expect(
+      en.experience.companies.every((company) => company.homepageHighlights.length <= 3),
+    ).toBe(true);
+    expect(clientLogos.find((logo) => logo.id === "dela")?.logoFile).toBe(
+      "/images/clients/dela-logo.png",
     );
   });
 

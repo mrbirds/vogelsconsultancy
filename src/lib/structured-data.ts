@@ -8,7 +8,6 @@ export function buildPersonJsonLd(locale: Locale) {
     name: siteConfig.person,
     jobTitle: siteConfig.role[locale],
     url: `${siteConfig.url}/${locale}`,
-    image: `${siteConfig.url}/images/robin-vogels-profile.jpg`,
     email: `mailto:${siteConfig.email}`,
     sameAs: [siteConfig.linkedin],
     address: {

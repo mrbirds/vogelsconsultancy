@@ -66,16 +66,11 @@ export default async function ExperiencePage({
           </div>
 
           {/* Career foundation: deliberately the least prominent block, kept
-              very compact per PRD §31 — no logos, no per-employer rows. */}
+              compact per PRD §32 — no logos, no per-employer rows. */}
           <div className="mt-10 max-w-2xl border-t border-border pt-8">
             <p className="text-sm text-ink-muted">{experience.careerFoundation.period}</p>
             <h3 className="mt-1 text-base font-semibold text-ink-muted">{experience.careerFoundation.title}</h3>
             <p className="mt-2 text-[15px] leading-relaxed text-ink-muted">{experience.careerFoundation.body}</p>
-            {experience.careerFoundation.progression ? (
-              <p className="mt-3 text-sm text-ink-muted">
-                {experience.careerFoundation.progression.join(" → ")}
-              </p>
-            ) : null}
           </div>
         </Container>
       </section>

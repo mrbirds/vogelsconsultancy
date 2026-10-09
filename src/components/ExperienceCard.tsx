@@ -8,7 +8,7 @@ export function ExperienceCard({ company }: { company: CompanyExperience }) {
   return (
     <article className="flex flex-col border-t border-border pt-6">
       {logo ? (
-        <div className="mb-5 flex h-12 max-w-[180px] items-start sm:h-16">
+        <div className="relative mb-5 flex h-16 w-[180px] shrink-0 items-center justify-center">
           <ClientLogoMark logo={logo} className={primaryLogoClassName(company.id)} />
         </div>
       ) : null}
@@ -32,4 +32,3 @@ export function ExperienceCard({ company }: { company: CompanyExperience }) {
     </article>
   );
 }
-

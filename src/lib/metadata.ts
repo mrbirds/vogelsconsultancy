@@ -35,14 +35,6 @@ export function buildMetadata(locale: Locale, path: string, meta: PageMeta): Met
       siteName: siteConfig.name,
       locale: locale === "nl" ? "nl_NL" : "en_US",
       type: "website",
-      images: [
-        {
-          url: `${siteConfig.url}/images/robin-vogels-profile.jpg`,
-          width: 1200,
-          height: 1500,
-          alt: siteConfig.person,
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",

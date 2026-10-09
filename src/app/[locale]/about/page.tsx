@@ -42,7 +42,7 @@ export default async function AboutPage({
 
           <div className="mt-10 grid gap-10 lg:grid-cols-[0.6fr_1fr] lg:gap-16">
             <div>
-              <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-surface-subtle lg:max-w-none">
+              <div className="relative mx-auto aspect-square w-48 overflow-hidden rounded-2xl bg-surface-subtle sm:w-56 lg:mx-0 lg:aspect-[4/5] lg:w-full lg:max-w-none">
                 <Image
                   src="/images/robin-vogels-profile.jpg"
                   alt={about.photoAlt}

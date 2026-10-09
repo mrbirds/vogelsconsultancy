@@ -15,7 +15,7 @@ export function Logo({ locale, className = "" }: { locale: Locale; className?: s
         width={274}
         height={195}
         priority
-        className="h-12 w-auto sm:h-14"
+        className="h-16 w-auto sm:h-[76px]"
       />
     </Link>
   );

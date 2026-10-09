@@ -24,15 +24,13 @@ export interface HeroContent {
   eyebrow: string;
   heading: string;
   intro: string;
-  supportingLine: string;
   ctaPrimary: string;
   ctaSecondary: string;
-  photoAlt: string;
 }
 
 export interface CredibilityContent {
-  heading: string;
-  markers: string[];
+  label: string;
+  line: string;
 }
 
 export interface ExpertiseItem {
@@ -72,7 +70,7 @@ export interface CompanyExperience {
   role: string;
   period: string;
   homepageSummary: string;
-  /** Concise homepage bullets — maximum three, per PRD §31. */
+  /** Concise homepage bullets — maximum three, per PRD §32. */
   homepageHighlights: string[];
   webSummary: string;
   /** Full bullet list shown on the Experience detail page. */
@@ -101,10 +99,7 @@ export interface ExperienceContent {
   /** DearNova period — summarised compactly, not as a timeline. */
   earlierExperience: ExperiencePeriodBlock;
   /** Everything before DearNova — deliberately the least prominent block. */
-  careerFoundation: ExperiencePeriodBlock & {
-    /** Optional quiet role-progression line, e.g. "A → B → C". */
-    progression?: string[];
-  };
+  careerFoundation: ExperiencePeriodBlock;
   technologyHeading: string;
   /** No approved copy for this section's intro paragraph; keep optional. */
   technologyIntro?: string;
@@ -119,9 +114,6 @@ export interface AboutContent {
   factsHeading: string;
   facts: string[];
   photoAlt: string;
-  previewHeading: string;
-  previewIntro: string;
-  previewCta: string;
 }
 
 export interface ContactContent {
