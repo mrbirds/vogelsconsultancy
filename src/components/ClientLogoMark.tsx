@@ -1,18 +1,15 @@
 import Image from "next/image";
 import type { ClientLogo } from "@/content/clients";
 
-/**
- * Per-logo sizing within the shared 180×64px stage. The values account for
- * each logo's aspect ratio so the three marks have similar visual weight.
- */
+/** Tune each wordmark to a similar visual weight while preserving its ratio. */
 const PRIMARY_LOGO_HEIGHT: Record<string, string> = {
-  dela: "h-[54px] max-w-[180px]",
-  essent: "h-[41px] max-w-[180px]",
-  freo: "h-16 max-w-[154px]",
+  dela: "h-8 max-w-[124px] sm:h-[46px] sm:max-w-[180px]",
+  essent: "h-7 max-w-[124px] sm:h-[35px] sm:max-w-[180px]",
+  freo: "h-8 max-w-[112px] sm:h-[46px] sm:max-w-[154px]",
 };
 
 export function primaryLogoClassName(id: string): string {
-  return PRIMARY_LOGO_HEIGHT[id] ?? "h-8 sm:h-10 max-w-[180px]";
+  return PRIMARY_LOGO_HEIGHT[id] ?? "h-7 max-w-[124px] sm:h-9 sm:max-w-[180px]";
 }
 
 /**
@@ -41,7 +38,7 @@ export function ClientLogoMark({
       alt={alt}
       width={logo.width}
       height={logo.height}
-      sizes="180px"
+      sizes="(min-width: 640px) 180px, 124px"
       className={`w-auto object-contain ${className}`}
     />
   );

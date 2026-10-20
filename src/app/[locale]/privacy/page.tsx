@@ -28,10 +28,10 @@ export default async function PrivacyPage({
   const privacy = content.privacy;
 
   return (
-    <section className="py-16 sm:py-24">
-      <Container className="max-w-2xl">
-        <h1 className="text-[2.1rem] leading-tight sm:text-5xl">{privacy.heading}</h1>
-        <p className="mt-5 text-lg leading-relaxed text-ink-muted">{privacy.intro}</p>
+    <section className="py-[var(--section-space)]">
+      <Container className="max-w-[var(--reading-width)]">
+        <h1 className="text-[clamp(2rem,4vw,3.25rem)] leading-tight">{privacy.heading}</h1>
+        <p className="mt-5 text-base leading-relaxed text-ink-muted sm:text-lg">{privacy.intro}</p>
 
         <div className="mt-10 space-y-10 border-t border-border pt-8">
           {privacy.sections.map((section) => (

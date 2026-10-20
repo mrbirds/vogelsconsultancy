@@ -18,10 +18,10 @@ export function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2 id={id} className="mt-3 text-[1.9rem] leading-tight sm:text-4xl">
+      <h2 id={id} className="mt-3 text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight">
         {heading}
       </h2>
-      {intro ? <p className="mt-4 text-lg leading-relaxed text-ink-muted">{intro}</p> : null}
+      {intro ? <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">{intro}</p> : null}
     </div>
   );
 }

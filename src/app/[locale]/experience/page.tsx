@@ -35,15 +35,15 @@ export default async function ExperiencePage({
     <>
       <PageHero eyebrow={experience.eyebrow} heading={experience.heading} intro={experience.intro} />
 
-      <section className="py-16 sm:py-20" aria-labelledby="selected-experience-heading">
-        <Container>
+      <section className="py-[var(--section-space)]" aria-labelledby="selected-experience-heading">
+        <Container className="max-w-5xl">
           <SectionHeading
             id="selected-experience-heading"
             heading={experience.selectedHeading}
             intro={experience.selectedIntro}
           />
 
-          <div className="mt-12">
+          <div className="mt-9 sm:mt-11">
             {experience.companies.map((company) => (
               <ExperienceDetail key={company.id} company={company} />
             ))}
@@ -51,47 +51,29 @@ export default async function ExperiencePage({
         </Container>
       </section>
 
-      <section className="border-t border-border bg-surface-subtle py-16 sm:py-20" aria-labelledby="earlier-experience-heading">
-        <Container>
+      <section className="border-t border-border bg-surface-subtle py-[var(--section-space)]" aria-labelledby="earlier-experience-heading">
+        <Container className="max-w-5xl">
           <SectionHeading
             id="earlier-experience-heading"
             heading={experience.earlierHeading}
             intro={experience.earlierIntro}
           />
 
-          <div className="mt-10 max-w-2xl">
-            <p className="text-sm font-medium text-ink-muted">{experience.earlierExperience.period}</p>
-            <h3 className="mt-1 text-lg font-semibold text-ink">{experience.earlierExperience.title}</h3>
-            <p className="mt-2 leading-relaxed text-ink-muted">{experience.earlierExperience.body}</p>
-          </div>
-
-          {/* Career foundation: deliberately the least prominent block, kept
-              compact per PRD §32 — no logos, no per-employer rows. */}
-          <div className="mt-10 max-w-2xl border-t border-border pt-8">
-            <p className="text-sm text-ink-muted">{experience.careerFoundation.period}</p>
-            <h3 className="mt-1 text-base font-semibold text-ink-muted">{experience.careerFoundation.title}</h3>
-            <p className="mt-2 text-[15px] leading-relaxed text-ink-muted">{experience.careerFoundation.body}</p>
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-16 sm:py-20" aria-labelledby="technology-heading">
-        <Container>
-          <SectionHeading
-            id="technology-heading"
-            heading={experience.technologyHeading}
-            intro={experience.technologyIntro}
-          />
-          <ul className="mt-8 flex flex-wrap gap-3">
-            {experience.technologyList.map((tech) => (
-              <li
-                key={tech}
-                className="rounded-full border border-border px-4 py-2 text-sm font-medium text-ink"
+          <div className="mt-8 divide-y divide-border border-y border-border">
+            {[...experience.earlierExperience, ...experience.careerFoundation].map((engagement) => (
+              <article
+                key={`${engagement.period}-${engagement.title}`}
+                className="grid gap-2 py-5 sm:grid-cols-[9rem_minmax(0,1fr)] sm:gap-6 sm:py-6"
               >
-                {tech}
-              </li>
+                <p className="text-sm text-ink-muted">{engagement.period}</p>
+                <div>
+                  <h3 className="text-base font-semibold text-ink">{engagement.title}</h3>
+                  <p className="mt-1 text-sm text-brand-blue-link">{engagement.role}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-muted">{engagement.body}</p>
+                </div>
+              </article>
             ))}
-          </ul>
+          </div>
         </Container>
       </section>
 

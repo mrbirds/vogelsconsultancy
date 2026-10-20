@@ -51,6 +51,19 @@ describe("content parity between nl and en", () => {
     expect(nl.expertise.items.map((item) => item.title)).toEqual(titles);
   });
 
+  it("keeps the expertise page concise and aligned in both languages", () => {
+    const ids = ["leadership", "architecture", "modernisation", "engineering-excellence"];
+
+    expect(nl.expertisePage.areas.map((area) => area.id)).toEqual(ids);
+    expect(en.expertisePage.areas.map((area) => area.id)).toEqual(ids);
+    expect(nl.expertisePage.areas.every((area) => area.capabilities.length <= 3)).toBe(true);
+    expect(en.expertisePage.areas.every((area) => area.capabilities.length <= 3)).toBe(true);
+    expect(nl.expertisePage.proofPoints).toHaveLength(3);
+    expect(en.expertisePage.proofPoints).toHaveLength(3);
+    expect(nl.expertisePage.experienceLink).toBe("Bekijk mijn ervaring →");
+    expect(en.expertisePage.experienceLink).toBe("Explore my experience →");
+  });
+
   it("has the same number of selected experience companies", () => {
     expect(en.experience.companies.length).toBe(nl.experience.companies.length);
     expect(en.experience.companies.map((c) => c.id)).toEqual(
@@ -73,6 +86,91 @@ describe("content parity between nl and en", () => {
     expect(clientLogos.find((logo) => logo.id === "dela")?.logoFile).toBe(
       "/images/clients/dela-logo.png",
     );
+  });
+
+  it("aligns selected roles and dates with the CV", () => {
+    const [delaNl, essentNl, freoNl] = nl.experience.companies;
+    const [delaEn, essentEn, freoEn] = en.experience.companies;
+
+    expect(delaNl.role).toBe("Engineering Lead & Solution Architect");
+    expect(delaEn.role).toBe(delaNl.role);
+    expect(delaNl.period).toContain("2021");
+    expect(delaNl.homepageSummary).toContain("21");
+    expect(delaEn.homepageSummary).toContain("21");
+
+    expect(essentNl.role).toBe("Lead Consultant / Solution Architect");
+    expect(essentEn.role).toBe(essentNl.role);
+    expect(essentNl.period).toBe("jul 2020 — apr 2022");
+    expect(essentEn.period).toBe("Jul 2020 — Apr 2022");
+
+    expect(freoNl.role).toBe("Lead Sitecore Developer / Scrum Master");
+    expect(freoEn.role).toBe(freoNl.role);
+    expect(freoNl.period).toBe("feb 2019 — jul 2020");
+    expect(freoEn.period).toBe("Feb 2019 — Jul 2020");
+  });
+
+  it("keeps the Experience cases concise and evidence-led", () => {
+    for (const content of [nl, en]) {
+      const [dela, essent, freo] = content.experience.companies;
+      expect(dela.evidenceGroups).toHaveLength(4);
+      expect(essent.evidenceGroups).toHaveLength(3);
+      expect(freo.evidenceGroups).toHaveLength(3);
+      expect(content.experience.earlierExperience.length).toBe(1);
+      expect(content.experience.careerFoundation.length).toBe(4);
+    }
+
+    expect(nl.experience.companies[0].evidenceGroups.map(({ heading }) => heading)).toEqual([
+      "Leiderschap & organisatie",
+      "Business & innovatie",
+      "Engineering Excellence",
+      "Architectuur & digitaal landschap",
+    ]);
+    expect(en.experience.companies[0].evidenceGroups.map(({ heading }) => heading)).toEqual([
+      "Leadership & organisation",
+      "Business & innovation",
+      "Engineering excellence",
+      "Architecture & digital landscape",
+    ]);
+    expect(nl.experience.companies[1].evidenceGroups[2].body).toContain("Sitecore 9.3");
+    expect(en.experience.companies[2].evidenceGroups[2].body).toContain("WhatsApp chatbot");
+  });
+
+  it("keeps About facts aligned in both locales", () => {
+    expect(nl.about.factsHeading).toBe("In het kort");
+    expect(nl.about.facts).toEqual([
+      "20+ jaar software engineering",
+      "10+ jaar technisch leiderschap",
+      "Engineering Lead & Solution Architect",
+      "Rosmalen, Nederland",
+      "Nederlands & Engels",
+    ]);
+    expect(en.about.factsHeading).toBe("At a glance");
+    expect(en.about.facts).toEqual([
+      "20+ years software engineering",
+      "10+ years technical leadership",
+      "Engineering Lead & Solution Architect",
+      "Rosmalen, the Netherlands",
+      "Dutch & English",
+    ]);
+    expect([...nl.about.facts, ...en.about.facts].join(" ")).not.toContain(
+      "Professional Scrum Master I",
+    );
+  });
+
+  it("includes the 2017–2019 DELA assignment in earlier experience", () => {
+    const delaNl = nl.experience.earlierExperience.find((item) =>
+      item.title.includes("DELA Nederland"),
+    );
+    const delaEn = en.experience.earlierExperience.find((item) =>
+      item.title.includes("DELA Nederland"),
+    );
+
+    expect(delaNl?.period).toBe("mei 2017 — feb 2019");
+    expect(delaNl?.title).toContain("opdracht via DearNova");
+    expect(delaNl?.role).toBe("Lead Sitecore Developer / Technical Lead");
+    expect(delaEn?.period).toBe("May 2017 — Feb 2019");
+    expect(delaEn?.title).toContain("engagement via DearNova");
+    expect(delaEn?.role).toBe("Lead Sitecore Developer / Technical Lead");
   });
 
   it("has the same number of approach principles", () => {

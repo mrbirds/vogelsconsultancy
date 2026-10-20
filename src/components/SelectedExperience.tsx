@@ -13,7 +13,7 @@ export function SelectedExperience({
   content: ExperienceContent;
 }) {
   return (
-    <section className="py-16 sm:py-20" aria-labelledby="experience-heading">
+    <section className="py-[var(--section-space)]" aria-labelledby="experience-heading">
       <Container>
         <SectionHeading
           id="experience-heading"
@@ -22,7 +22,7 @@ export function SelectedExperience({
           intro={content.selectedIntro}
         />
 
-        <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-9 grid gap-x-8 gap-y-10 sm:mt-11 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-10">
           {content.companies.map((company) => (
             <ExperienceCard key={company.id} company={company} />
           ))}

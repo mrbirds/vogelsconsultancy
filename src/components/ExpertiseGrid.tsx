@@ -15,7 +15,7 @@ export function ExpertiseGrid({
   const list = items ?? content.items;
 
   return (
-    <section className="py-16 sm:py-20" aria-labelledby={hideHeading ? undefined : "expertise-heading"}>
+    <section className="py-[var(--section-space)]" aria-labelledby={hideHeading ? undefined : "expertise-heading"}>
       <Container>
         {hideHeading ? null : (
           <SectionHeading
@@ -25,7 +25,7 @@ export function ExpertiseGrid({
             intro={content.intro}
           />
         )}
-        <div className="mt-12 grid gap-x-10 gap-y-12 sm:grid-cols-2">
+        <div className="mt-9 grid gap-x-10 gap-y-9 sm:mt-11 sm:grid-cols-2">
           {list.map((item) => (
             <div key={item.id} className="border-t border-border pt-6">
               <h3 className="text-xl font-semibold text-ink">{item.title}</h3>

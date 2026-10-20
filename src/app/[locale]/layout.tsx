@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Manrope } from "next/font/google";
 import { notFound } from "next/navigation";
@@ -10,6 +11,19 @@ import { Analytics } from "@/components/Analytics";
 import { CookieConsent } from "@/components/CookieConsent";
 import { buildPersonJsonLd, buildProfessionalServiceJsonLd } from "@/lib/structured-data";
 import "../globals.css";
+
+export const metadata: Metadata = {
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-256.png", type: "image/png", sizes: "256x256" },
+      { url: "/favicon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" },
+    ],
+  },
+};
 
 const manrope = Manrope({
   subsets: ["latin"],

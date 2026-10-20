@@ -51,6 +51,28 @@ export interface ExpertiseContent {
   items: ExpertiseItem[];
 }
 
+export interface ExpertisePageArea {
+  id: string;
+  title: string;
+  statement: string;
+  capabilities: string[];
+}
+
+export interface ExpertisePageContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  areasLabel: string;
+  areas: ExpertisePageArea[];
+  proofHeading: string;
+  proofPoints: string[];
+  experienceLink: string;
+  ctaLabel: string;
+  ctaHeading: string;
+  ctaIntro: string;
+  ctaButton: string;
+}
+
 export interface ApproachPrinciple {
   title: string;
   body: string;
@@ -73,15 +95,14 @@ export interface CompanyExperience {
   /** Concise homepage bullets — maximum three, per PRD §32. */
   homepageHighlights: string[];
   webSummary: string;
-  /** Full bullet list shown on the Experience detail page. */
-  keyAreas: string[];
-  technology?: string;
-  quote?: string;
+  /** Selected, case-specific evidence for the full Experience page. */
+  evidenceGroups: { heading: string; body: string }[];
 }
 
 export interface ExperiencePeriodBlock {
   period: string;
   title: string;
+  role: string;
   body: string;
 }
 
@@ -96,10 +117,10 @@ export interface ExperienceContent {
   companies: CompanyExperience[];
   earlierHeading: string;
   earlierIntro: string;
-  /** DearNova period — summarised compactly, not as a timeline. */
-  earlierExperience: ExperiencePeriodBlock;
-  /** Everything before DearNova — deliberately the least prominent block. */
-  careerFoundation: ExperiencePeriodBlock;
+  /** Client engagements before the selected cases, kept visually subordinate. */
+  earlierExperience: ExperiencePeriodBlock[];
+  /** Earlier career foundation, deliberately the least prominent section. */
+  careerFoundation: ExperiencePeriodBlock[];
   technologyHeading: string;
   /** No approved copy for this section's intro paragraph; keep optional. */
   technologyIntro?: string;
@@ -167,6 +188,7 @@ export interface Content {
   hero: HeroContent;
   credibility: CredibilityContent;
   expertise: ExpertiseContent;
+  expertisePage: ExpertisePageContent;
   approach: ApproachContent;
   experience: ExperienceContent;
   about: AboutContent;

@@ -4,16 +4,16 @@ import { Container } from "./Container";
 
 export function ContactCTA({ content, locale }: { content: ContactContent; locale: "nl" | "en" }) {
   return (
-    <section className="border-t border-border bg-surface-subtle py-16 sm:py-20" aria-labelledby="contact-cta-heading">
-      <Container className="max-w-3xl text-center">
+    <section className="border-t border-border bg-surface-subtle py-[var(--section-space)]" aria-labelledby="contact-cta-heading">
+      <Container className="max-w-[var(--reading-width)] text-center">
         <p className="text-sm font-semibold uppercase tracking-wide text-brand-blue-link">
           {content.eyebrow}
         </p>
-        <h2 id="contact-cta-heading" className="mt-3 text-[1.9rem] leading-tight sm:text-4xl">
+        <h2 id="contact-cta-heading" className="mt-3 text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight">
           {content.heading}
         </h2>
-        <p className="mt-4 text-lg leading-relaxed text-ink-muted">{content.intro}</p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
+        <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">{content.intro}</p>
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
           <a
             href={`mailto:${siteConfig.email}`}
             className="inline-flex min-h-12 items-center justify-center rounded-full bg-ink px-7 text-[15px] font-semibold text-white transition-colors hover:bg-ink/90"

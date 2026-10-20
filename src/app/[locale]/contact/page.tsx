@@ -29,13 +29,13 @@ export default async function ContactPage({
   const contact = content.contact;
 
   return (
-    <section className="py-16 sm:py-24">
-      <Container className="max-w-2xl">
+    <section className="py-[var(--section-space)]">
+      <Container className="max-w-[var(--reading-width)]">
         <p className="text-sm font-semibold uppercase tracking-wide text-brand-blue-link">
           {contact.eyebrow}
         </p>
-        <h1 className="mt-3 text-[2.1rem] leading-tight sm:text-5xl">{contact.heading}</h1>
-        <p className="mt-5 text-lg leading-relaxed text-ink-muted">{contact.intro}</p>
+        <h1 className="mt-3 text-[clamp(2rem,4vw,3.25rem)] leading-tight">{contact.heading}</h1>
+        <p className="mt-5 text-base leading-relaxed text-ink-muted sm:text-lg">{contact.intro}</p>
 
         <dl className="mt-10 space-y-6 border-t border-border pt-8">
           <div>
@@ -74,7 +74,7 @@ export default async function ContactPage({
           </div>
         </dl>
 
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
           <a
             href={`mailto:${siteConfig.email}`}
             className="inline-flex min-h-12 items-center justify-center rounded-full bg-ink px-7 text-[15px] font-semibold text-white transition-colors hover:bg-ink/90"

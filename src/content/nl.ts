@@ -5,7 +5,7 @@ export const nl: Content = {
   htmlLang: "nl-NL",
   meta: {
     home: {
-      title: "Robin Vogels | Technology & Engineering Leadership | Vogels Consultancy",
+      title: "Robin Vogels | Engineering Lead | Vogels Consultancy",
       description:
         "Technisch leiderschap dat organisaties verder brengt. Onafhankelijke expertise in solution architecture, platformmodernisering en sterke engineeringteams.",
     },
@@ -22,7 +22,7 @@ export const nl: Content = {
     about: {
       title: "Over mij | Vogels Consultancy",
       description:
-        "De loopbaan en werkwijze van Robin Vogels: van softwareontwikkeling en architectuur naar technisch leiderschap.",
+        "Robin Vogels is Engineering Lead en Solution Architect met ruim 20 jaar ervaring in software engineering en meer dan 10 jaar technisch leiderschap.",
     },
     contact: {
       title: "Contact | Vogels Consultancy",
@@ -45,16 +45,16 @@ export const nl: Content = {
     languageSwitchLabel: "Schakel naar het Engels",
   },
   hero: {
-    eyebrow: "Onafhankelijk technisch leiderschap",
+    eyebrow: "Engineering Lead",
     heading: "Technisch leiderschap dat organisaties verder brengt.",
     intro:
-      "Ik help organisaties hun digitale platforms te moderniseren, complexe technologiekeuzes te maken en engineeringteams structureel te versterken. Van strategie en architectuur tot de daadwerkelijke uitvoering.",
+      "Ik help organisaties hun digitale platformen te moderniseren, technische keuzes te maken en engineeringteams duurzaam te versterken. Ik verbind technologie, product en business en combineer technische visie met coaching en uitvoering.",
     ctaPrimary: "Bekijk mijn expertise",
     ctaSecondary: "Neem contact op",
   },
   credibility: {
     label: "Ervaring en expertise",
-    line: "20+ jaar ervaring · Technology Leadership · Solution Architecture · Engineering Excellence",
+    line: "20+ jaar software engineering · 10+ jaar technisch leiderschap · Engineering Lead · Solution Architecture · Engineering Excellence",
   },
   expertise: {
     eyebrow: "Expertise",
@@ -81,6 +81,71 @@ export const nl: Content = {
         body: "Ik versterk softwarekwaliteit en vakmanschap met passende CI/CD, testautomatisering, observability, beveiliging en onderhoudbare werkwijzen.",
       },
     ],
+  },
+  expertisePage: {
+    eyebrow: "Expertise",
+    heading: "Waarmee ik organisaties help",
+    intro:
+      "Ik help organisaties digitale platforms verbeteren met technisch leiderschap, architectuur en technische diepgang.",
+    areasLabel: "Expertisegebieden",
+    areas: [
+      {
+        id: "leadership",
+        title: "Technology & Engineering Leadership",
+        statement:
+          "Ik geef technische richting over teams heen en help engineers en technische leiders groeien. Zo ontstaat ruimte voor eigenaarschap en blijvende verbetering.",
+        capabilities: [
+          "Technische visie en engineeringstrategie",
+          "Coaching van Tech Leads en engineers",
+          "Verbinding tussen technologie, product, bedrijfsdoelen en stakeholders",
+        ],
+      },
+      {
+        id: "architecture",
+        title: "Solution Architecture",
+        statement:
+          "Ik vertaal complexe vragen uit de organisatie en technologie naar heldere architectuurkeuzes. De richting is uitvoerbaar, onderhoudbaar en passend bij de context.",
+        capabilities: [
+          "Doelarchitectuur en onderbouwde technologiekeuzes",
+          "API's, integraties, cloud en digitale platforms",
+          "Aandacht voor security, compliance en onderhoudbaarheid",
+        ],
+      },
+      {
+        id: "modernisation",
+        title: "Platform Modernisation",
+        statement:
+          "Ik help organisaties hun digitale platforms stap voor stap vernieuwen, zonder onnodige verstoring van bedrijfskritische diensten.",
+        capabilities: [
+          "Van verouderde Sitecore/MVC-platformen naar moderne web-, API- en Azure-architectuur",
+          "Evaluatie en selectie van CMS- en platformoplossingen",
+          "Praktische moderniseringsstappen met oog voor continuïteit",
+        ],
+      },
+      {
+        id: "engineering-excellence",
+        title: "Engineering Excellence",
+        statement:
+          "Ik verbeter hoe software wordt gebouwd, uitgebracht en beheerd. Teams krijgen zo meer grip op kwaliteit en kunnen betrouwbaar blijven verbeteren.",
+        capabilities: [
+          "CI/CD en Infrastructure-as-Code",
+          "Kwaliteit, security, betrouwbaarheid en prestaties",
+          "Observability en datagedreven verbetering",
+        ],
+      },
+    ],
+    proofHeading: "Expertise in de praktijk",
+    proofPoints: [
+      "Technische verantwoordelijkheid voor drie multidisciplinaire teams en circa 21 professionals.",
+      "Van releases om de twee weken naar meerdere uitrolmomenten per dag.",
+      "Architectuur en modernisering van bedrijfskritische digitale platforms.",
+    ],
+    experienceLink: "Bekijk mijn ervaring →",
+    ctaLabel: "Contact",
+    ctaHeading: "Een technisch vraagstuk dat om richting vraagt?",
+    ctaIntro:
+      "Ik denk graag mee over technisch leiderschap, architectuur, platformmodernisering of het versterken van softwareontwikkeling.",
+    ctaButton: "Neem contact op",
   },
   approach: {
     eyebrow: "Mijn aanpak",
@@ -115,124 +180,159 @@ export const nl: Content = {
       {
         id: "dela",
         company: "DELA",
-        role: "Technology & Engineering Lead / Solution Architect",
+        role: "Engineering Lead & Solution Architect",
         period: "2021 — heden",
         homepageSummary:
-          "Technisch leiderschap voor drie multidisciplinaire teams (circa 18 professionals) en de doorontwikkeling van klantgerichte digitale platforms.",
+          "Technisch verantwoordelijk voor drie multidisciplinaire teams en circa 21 professionals in DELA's online engineeringdomein.",
         homepageHighlights: [
           "Van tweewekelijkse releases naar meerdere uitrolmomenten per dag.",
-          "Modernisering van Sitecore/MVC naar web-, API- en Azure-architectuur.",
-          "Technische koers voor drie teams in een gereguleerde omgeving.",
+          "Technische visie en architectuur voor drie teams en het online domein.",
+          "Modernisering van het digitale landschap en uitbreiding van Infrastructure-as-Code.",
         ],
         webSummary:
-          "Verantwoordelijk voor de technische koers en doorontwikkeling van DELA's online omgeving. Ik gaf leiding aan drie multidisciplinaire teams van circa 18 professionals en verbond productambities met duurzame architectuurkeuzes.",
-        keyAreas: [
-          "Technologiestrategie, architectuur en technische standaarden voor het online domein; productambities vertaald naar duurzame keuzes.",
-          "Leiding aan drie multidisciplinaire teams met Product Owners en Scrum Masters; werving en ontwikkeling van technische capaciteit.",
-          "Modernisering van Sitecore/MVC naar moderne web-, API- en Azure-architectuur.",
-          "CI/CD verbeterd van tweewekelijkse releases naar meerdere uitrolmomenten per dag; inzet van Infrastructure-as-Code, Dynatrace en Application Insights.",
-          "Samenwerking met de organisatie, marketing, architectuur, informatiebeveiliging en technologiepartners rond selectie en naleving van regelgeving.",
-          "Ervaring met iDIN, eHerkenning, Wwft en EAA; verkenning van een nieuw CMS en generatieve AI voor ontwikkeling en prototyping.",
+          "Binnen DELA's online engineeringdomein — van dela.nl en Mijn DELA tot portalen voor tussenpersonen, digitale klantreizen en integratieplatformen — geef ik technische richting aan drie multidisciplinaire teams en circa 21 professionals.",
+        evidenceGroups: [
+          {
+            heading: "Leiderschap & organisatie",
+            body: "Coacht Tech Leads en engineers en bouwt aan technische visie, eigenaarschap en consistente werkwijzen over drie teams heen.",
+          },
+          {
+            heading: "Business & innovatie",
+            body: "Verbindt technologie, product en business; adviseert over haalbaarheid, risico's, security, compliance en oplossingsrichting. Zet generatieve AI praktisch in voor development, code reviews, prototyping en tooling.",
+          },
+          {
+            heading: "Engineering Excellence",
+            body: "Verkortte de releasecyclus van tweewekelijks naar meerdere uitrolmomenten per dag. Infrastructure-as-Code, releases per applicatieonderdeel en observability met Dynatrace en Application Insights ondersteunen verdere verbetering.",
+          },
+          {
+            heading: "Architectuur & digitaal landschap",
+            body: "Werkt aan doelarchitectuur en modernisering van legacy Sitecore/MVC naar moderne web-, API- en Azure-architecturen, inclusief evaluatie en selectie van een CMS-platform.",
+          },
         ],
-        quote:
-          "Duidelijke richting, vertrouwen en eigenaarschap: teams presteren het beste wanneer mensen begrijpen waar ze naartoe werken, ruimte krijgen om beslissingen te nemen en verantwoordelijkheid dragen voor het resultaat.",
       },
       {
         id: "essent",
         company: "Essent",
-        role: "Lead Consultant",
-        period: "Jun 2020 — Apr 2022",
+        role: "Lead Consultant / Solution Architect",
+        period: "jul 2020 — apr 2022",
         homepageSummary:
-          "Architectuur en modernisering van het online platform, met een overgang naar een headless architectuur en een upgrade van Sitecore 9.3 naar 10.1.",
+          "Verbetering en modernisering van het online platform, met focus op stabiliteit, prestaties, architectuur en hands-on ontwikkeling.",
         homepageHighlights: [
-          "Technische koers voor het online platform.",
-          "Overgang naar een headless architectuur.",
-          "Upgrade van Sitecore 9.3 naar 10.1.",
+          "Analyse van stabiliteit en prestaties; advies over headless architectuur.",
+          "Migratie van Sitecore 9.3 naar 10.1 onderzocht en uitgevoerd.",
         ],
         webSummary:
-          "Verantwoordelijk voor architectuur, modernisering en technische kwaliteit van het online platform. Combineerde solution architecture met actief meewerken aan de techniek en begeleiding van het ontwikkelteam. Focus op stabiliteit, prestaties, softwarekwaliteit en de overgang naar een modernere headless architectuur.",
-        keyAreas: [
-          "Solution architecture en technische richting.",
-          "Modernisering richting een headless architectuur.",
-          "Migratie van Sitecore 9.3 naar 10.1.",
-          "Platformstabiliteit, prestaties en softwarekwaliteit.",
-          "CI/CD en testautomatisering.",
-          "Technische begeleiding en ondersteuning van developers.",
-          "Zelf software ontwikkelen waar dat nodig was.",
+          "Werkte aan de verbetering en modernisering van Essents online platform. De opdracht combineerde architectuur en hands-on ontwikkeling, met aandacht voor stabiliteit, prestaties en softwarekwaliteit.",
+        evidenceGroups: [
+          {
+            heading: "Stabiliteit & prestaties",
+            body: "Analyseerde de platformstabiliteit en prestaties en werkte aan verbeteringen van de online omgeving.",
+          },
+          {
+            heading: "Headless architectuur",
+            body: "Adviseerde over de ontwikkeling richting een modernere headless architectuur.",
+          },
+          {
+            heading: "Sitecore-migratie",
+            body: "Onderzocht en realiseerde de migratie van Sitecore 9.3 naar Sitecore 10.1.",
+          },
         ],
-        technology: ".NET / C#, Sitecore, Azure, Angular, CI/CD, testautomatisering",
       },
       {
         id: "freo",
         company: "Freo",
-        role: "Senior Team Lead",
-        period: "Feb 2019 — Jun 2020",
+        role: "Lead Sitecore Developer / Scrum Master",
+        period: "feb 2019 — jul 2020",
         homepageSummary:
-          "Doorontwikkeling van freo.nl met aandacht voor modernisering, softwarekwaliteit en geautomatiseerde releases.",
+          "Doorontwikkeling van freo.nl, personalisatie en digitale campagnes, met aandacht voor engineeringkwaliteit.",
         homepageHighlights: [
-          "Modernisering van het platform en de ontwikkelwerkwijze.",
-          "CI/CD en geautomatiseerde tests.",
-          "Technische begeleiding van het team.",
+          "Unit- en UI-tests en CI/CD in Azure DevOps.",
+          "Ontwikkelde een WhatsApp-chatbot.",
+          "Scrum Master en ondersteuning van teamleden.",
         ],
         webSummary:
-          "Verantwoordelijk voor de ontwikkeling en technische doorontwikkeling van freo.nl. De rol combineerde softwareontwikkeling met technisch leiderschap, met aandacht voor kwaliteit, geautomatiseerde releases en onderhoudbaarheid.",
-        keyAreas: [
-          "Ontwikkeling en modernisering van freo.nl.",
-          "Technische begeleiding van het ontwikkelteam.",
-          "CI/CD en testautomatisering.",
-          "Personalisatie en digitale klantervaring.",
-          "Softwarekwaliteit en onderhoudbaarheid.",
-          "Scrum Master-verantwoordelijkheden naast de technische rol.",
+          "Werkte aan freo.nl, personalisatie en digitale campagnes, met een combinatie van hands-on ontwikkeling en aandacht voor engineeringkwaliteit.",
+        evidenceGroups: [
+          {
+            heading: "Digitale ervaring",
+            body: "Bouwde verder aan freo.nl en personalisatie voor digitale campagnes.",
+          },
+          {
+            heading: "Kwaliteit & automatisering",
+            body: "Versterkte het ontwikkelproces met unit- en UI-tests en CI/CD in Azure DevOps.",
+          },
+          {
+            heading: "Team & innovatie",
+            body: "Ondersteunde teamleden en vervulde de Scrum Master-rol. Ontwikkelde daarnaast een WhatsApp-chatbot.",
+          },
         ],
-        technology: "Sitecore, C# / .NET, Azure DevOps, CI/CD, testautomatisering",
       },
     ],
     earlierHeading: "Eerdere ervaring",
-    earlierIntro:
-      "Voorafgaand aan mijn huidige opdrachten werkte ik in leidinggevende, architectuur- en projectrollen aan digitale platforms en softwareontwikkeling.",
-    earlierExperience: {
-      period: "2014–2019",
-      title: "DearNova — technisch leiderschap en projectbegeleiding",
-      body: "Als Senior Team Lead en Project Manager vervulde ik ook technische leidinggevende rollen bij onder meer DELA, EAGE en VZVZ. Mijn werk verschoof in deze periode van softwareontwikkeling naar technisch leiderschap, architectuur en teambegeleiding.",
-    },
-    careerFoundation: {
-      period: "2001–2014",
-      title: "Basis in softwareontwikkeling en architectuur",
-      body: "Ik begon als softwareontwikkelaar en groeide door naar architectuur en projectleiding. Bij Netaspect, Atos Origin, Interpolis en Achmea bouwde ik een brede basis op in softwareontwikkeling en complexe organisaties.",
-    },
+    earlierIntro: "Een beknopt overzicht van eerdere opdrachten.",
+    earlierExperience: [
+      {
+        period: "mei 2017 — feb 2019",
+        title: "DELA Nederland (opdracht via DearNova)",
+        role: "Lead Sitecore Developer / Technical Lead",
+        body: "Technische leiding aan drie Sitecore-teams; migratie van Sitecore 8 naar 9, personalisatie en integraties.",
+      },
+    ],
+    careerFoundation: [
+      {
+        period: "2016 — 2017",
+        title: "EAGE",
+        role: "Lead Sitecore Developer / Technical Lead",
+        body: "Nieuw digitaal platform, Dynamics-integratie, webshop, testen en CI/CD.",
+      },
+      {
+        period: "2015 — 2016",
+        title: "VZVZ",
+        role: "Lead .NET Developer / Technical Lead",
+        body: "Portaal voor medische gegevens, DigiD-integratie en codekwaliteit.",
+      },
+      {
+        period: "2014 — 2015",
+        title: "DELA",
+        role: "Lead .NET / Sitecore Developer / Scrum Master",
+        body: "Technical Lead en Scrum Master bij de vernieuwing van dela.nl en Mijn DELA.",
+      },
+      {
+        period: "2001 — 2013",
+        title: "Atos Origin / Achmea",
+        role: "Senior .NET Developer / Scrum Master / Project Manager",
+        body: "Opdrachten voor onder meer ANWB, Unigarant, Achmea, Interpolis en Zilveren Kruis.",
+      },
+    ],
     technologyHeading: "Technologie",
     technologyList: [
-      "Microsoft Azure",
-      "Azure DevOps",
-      "Infrastructure-as-Code",
-      "C# / .NET",
-      "React / Next.js",
-      "REST APIs / Azure API Management",
-      "Sitecore XP / SXA",
-      "Dynatrace",
-      "Application Insights",
-      "Azure AD B2C",
-      "iDIN",
-      "eHerkenning",
-      "Generative AI & MCP",
+      "Azure & DevOps",
+      "Infrastructure-as-Code & CI/CD",
+      ".NET & moderne webontwikkeling",
+      "API's & integratieplatformen",
+      "CMS & digitale platforms",
+      "Dynatrace & Application Insights",
+      "Identiteit & toegang",
+      "Generatieve AI & automatisering",
     ],
     viewAllCta: "Bekijk mijn volledige ervaring",
   },
   about: {
     eyebrow: "Over mij",
-    heading: "Van softwareontwikkelaar naar technisch leider",
+    heading: "Engineering Lead",
     paragraphs: [
-      "Ik ben Robin Vogels. In ruim twintig jaar groeide ik van softwareontwikkelaar en solution architect naar technisch leider; inmiddels heb ik meer dan tien jaar ervaring met het richting geven aan teams en technologie.",
-      "Ik werk graag in complexe organisaties, waar verschillende belangen en afhankelijkheden samenkomen. Daar verbind ik technologie, product en bedrijfsdoelen en help ik teams en betrokkenen om tot heldere keuzes te komen.",
-      "Wat mij energie geeft, is het verbinden van mensen, technologie en ambities. Complexe vraagstukken terugbrengen tot heldere keuzes, teams helpen groeien en vervolgens zien dat verbeteringen daadwerkelijk resultaat opleveren.",
-      "Omdat ik zelf jarenlang software heb ontwikkeld, blijf ik graag dicht bij de techniek. Ik geef richting en vertrouwen, en help teams verantwoordelijkheid te nemen voor resultaat dat ook op de lange termijn standhoudt.",
+      "Ik ben Robin Vogels, Engineering Lead en Solution Architect met ruim 20 jaar ervaring in software engineering en meer dan 10 jaar in technisch leiderschap.",
+      "Mijn loopbaan begon dicht op de techniek. Vanuit softwareontwikkeling en architectuur ben ik steeds meer verantwoordelijkheid gaan dragen voor technische richting, teams en engineeringkwaliteit. Die combinatie past bij mij: strategisch richting geven en tegelijk dicht genoeg bij de techniek blijven om keuzes te begrijpen en teams inhoudelijk verder te helpen.",
+      "Wat mij energie geeft, is mensen, technologie en ambities verbinden. Ik breng complexe vraagstukken terug tot heldere keuzes, help engineers en technische leiders groeien en zie graag dat verbeteringen ook echt resultaat opleveren.",
+      "Ik werk graag in complexe organisaties waar technologie belangrijk is voor de business en waar veel belangen samenkomen. Dan verbind ik engineering, product en business en help ik teams met duidelijke richting, vertrouwen en eigenaarschap — met oog voor kwaliteit, security, betrouwbaarheid en voortgang.",
     ],
-    factsHeading: "Kort",
+    factsHeading: "In het kort",
     facts: [
+      "20+ jaar software engineering",
+      "10+ jaar technisch leiderschap",
+      "Engineering Lead & Solution Architect",
       "Rosmalen, Nederland",
-      "Hogere Informatica — Fontys Hogescholen",
-      "Professional Scrum Master I",
-      "Nederlands / Engels",
+      "Nederlands & Engels",
     ],
     photoAlt: "Portretfoto van Robin Vogels",
   },

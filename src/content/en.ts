@@ -5,7 +5,7 @@ export const en: Content = {
   htmlLang: "en",
   meta: {
     home: {
-      title: "Robin Vogels | Technology & Engineering Leader | Vogels Consultancy",
+      title: "Robin Vogels | Engineering Lead | Vogels Consultancy",
       description:
         "Technology leadership that helps organisations move forward. Independent expertise in solution architecture, platform modernisation and stronger engineering teams.",
     },
@@ -22,7 +22,7 @@ export const en: Content = {
     about: {
       title: "About | Vogels Consultancy",
       description:
-        "From software engineering to technology leadership: the background, way of working and leadership style of Robin Vogels.",
+        "Robin Vogels is an Engineering Lead and Solution Architect with 20+ years in software engineering and 10+ years in technical leadership.",
     },
     contact: {
       title: "Contact | Vogels Consultancy",
@@ -45,16 +45,16 @@ export const en: Content = {
     languageSwitchLabel: "Switch to Dutch",
   },
   hero: {
-    eyebrow: "Independent technology consultancy",
+    eyebrow: "Engineering Lead",
     heading: "Technology leadership for organisations moving forward.",
     intro:
-      "I help organisations modernise digital platforms, make complex technology decisions and strengthen engineering teams for the long term. From strategy and architecture through to delivery.",
+      "I help organisations modernise digital platforms, make sound technology decisions and strengthen engineering teams for the long term. I connect technology, product and business, combining technical vision with coaching and delivery.",
     ctaPrimary: "Explore my expertise",
     ctaSecondary: "Get in touch",
   },
   credibility: {
     label: "Experience and expertise",
-    line: "20+ years' experience · Technology Leadership · Solution Architecture · Engineering Excellence",
+    line: "20+ years in software engineering · 10+ years in technical leadership · Engineering Lead · Solution Architecture · Engineering Excellence",
   },
   expertise: {
     eyebrow: "Expertise",
@@ -81,6 +81,71 @@ export const en: Content = {
         body: "I improve software quality and engineering practice through fit-for-purpose CI/CD, automated testing, observability, security and maintainable ways of working.",
       },
     ],
+  },
+  expertisePage: {
+    eyebrow: "Expertise",
+    heading: "How I help organisations",
+    intro:
+      "I help organisations improve digital platforms through engineering leadership, architecture and hands-on technical depth.",
+    areasLabel: "Areas of expertise",
+    areas: [
+      {
+        id: "leadership",
+        title: "Technology & Engineering Leadership",
+        statement:
+          "I set technical direction across teams and help engineers and technical leaders grow. This builds ownership and creates the conditions for lasting improvement.",
+        capabilities: [
+          "Technical vision and engineering strategy",
+          "Coaching Tech Leads and engineers",
+          "Connecting technology, product, business and stakeholders",
+        ],
+      },
+      {
+        id: "architecture",
+        title: "Solution Architecture",
+        statement:
+          "I translate complex business and technology questions into clear architectural direction. The result is practical, maintainable and suited to the organisation's context.",
+        capabilities: [
+          "Future-state architecture and informed technology choices",
+          "APIs, integration, cloud and digital platforms",
+          "Security, compliance and maintainability by design",
+        ],
+      },
+      {
+        id: "modernisation",
+        title: "Platform Modernisation",
+        statement:
+          "I help organisations modernise digital platforms step by step, without unnecessarily disrupting business-critical services.",
+        capabilities: [
+          "Legacy Sitecore/MVC towards modern web, API and Azure architectures",
+          "Evaluation and selection of CMS and platform solutions",
+          "Practical modernisation that protects continuity",
+        ],
+      },
+      {
+        id: "engineering-excellence",
+        title: "Engineering Excellence",
+        statement:
+          "I improve how software is built, released and operated, helping teams strengthen quality and keep improving with confidence.",
+        capabilities: [
+          "CI/CD and Infrastructure-as-Code",
+          "Quality, security, reliability and performance",
+          "Observability and data-driven improvement",
+        ],
+      },
+    ],
+    proofHeading: "Expertise in practice",
+    proofPoints: [
+      "Technical responsibility across three multidisciplinary teams and approximately 21 professionals.",
+      "Improved releases from every two weeks to multiple deployments a day.",
+      "Architecture and modernisation of business-critical digital platforms.",
+    ],
+    experienceLink: "Explore my experience →",
+    ctaLabel: "Get in touch",
+    ctaHeading: "A technology challenge that needs direction?",
+    ctaIntro:
+      "I can help with engineering leadership, architecture, platform modernisation or improving engineering practices.",
+    ctaButton: "Get in touch",
   },
   approach: {
     eyebrow: "My approach",
@@ -115,124 +180,159 @@ export const en: Content = {
       {
         id: "dela",
         company: "DELA",
-        role: "Technology & Engineering Lead / Solution Architect",
+        role: "Engineering Lead & Solution Architect",
         period: "2021 — present",
         homepageSummary:
-          "Technology leadership for three multidisciplinary teams of around 18 people, guiding the evolution of customer-facing digital platforms.",
+          "Technical responsibility for three multidisciplinary teams and approximately 21 professionals in DELA's online engineering domain.",
         homepageHighlights: [
           "Moved from fortnightly releases to multiple deployments a day.",
-          "Modernised Sitecore/MVC towards web, API and Azure architecture.",
-          "Set technical direction across three teams in a regulated environment.",
+          "Set technical vision and architecture across three teams and the online domain.",
+          "Modernised the digital landscape and expanded Infrastructure-as-Code.",
         ],
         webSummary:
-          "Led the technical direction and evolution of DELA's online domain. I guided three multidisciplinary teams of around 18 people, connecting product goals with sustainable architecture choices.",
-        keyAreas: [
-          "Set technology strategy, architecture and engineering standards for the online domain, translating product goals into sustainable choices.",
-          "Led three multidisciplinary teams with Product Owners and Scrum Masters; recruited and developed engineering capability.",
-          "Modernised Sitecore/MVC towards modern web, API and Azure architectures.",
-          "Improved CI/CD from fortnightly releases to multiple deployments a day; introduced Infrastructure-as-Code, Dynatrace and Application Insights.",
-          "Worked with business, marketing, architecture, security and technology partners on platform choices and delivery in a regulated environment.",
-          "Worked with iDIN, eHerkenning, Wwft and EAA; evaluated a new CMS and generative AI for development and prototyping.",
+          "Across DELA's online engineering domain — from dela.nl and Mijn DELA to intermediary portals, digital customer journeys and integration platforms — I set technical direction for three multidisciplinary teams and approximately 21 professionals.",
+        evidenceGroups: [
+          {
+            heading: "Leadership & organisation",
+            body: "Coaches Tech Leads and engineers, shaping technical vision, ownership and consistent engineering practices across three teams.",
+          },
+          {
+            heading: "Business & innovation",
+            body: "Connects technology, product and business, advising on feasibility, risk, security, compliance and solution direction. Applies generative AI practically in development, code reviews, prototyping and tooling.",
+          },
+          {
+            heading: "Engineering excellence",
+            body: "Improved the release cycle from fortnightly to multiple deployments a day. Infrastructure-as-Code, releases decoupled by application component and observability with Dynatrace and Application Insights support further improvement.",
+          },
+          {
+            heading: "Architecture & digital landscape",
+            body: "Shapes future-state architecture and modernisation from legacy Sitecore/MVC towards modern web, API and Azure architectures, including CMS platform evaluation and selection.",
+          },
         ],
-        quote:
-          "Clear direction, trust and ownership: teams perform best when people understand where they are going, have the freedom to make decisions and are trusted to take responsibility for outcomes.",
       },
       {
         id: "essent",
         company: "Essent",
-        role: "Lead Consultant",
-        period: "Jun 2020 — Apr 2022",
+        role: "Lead Consultant / Solution Architect",
+        period: "Jul 2020 — Apr 2022",
         homepageSummary:
-          "Shaped the architecture and modernisation of the online platform, including a move to headless architecture and an upgrade from Sitecore 9.3 to 10.1.",
+          "Improved and modernised the online platform, focusing on stability, performance, architecture and hands-on development.",
         homepageHighlights: [
-          "Set technical direction for the online platform.",
-          "Helped move the platform towards headless architecture.",
-          "Upgraded Sitecore from 9.3 to 10.1.",
+          "Analysed stability and performance; advised on headless architecture.",
+          "Investigated and carried out the Sitecore 9.3 to 10.1 migration.",
         ],
         webSummary:
-          "Lead consultant responsible for the architecture, modernisation and technical quality of Essent's online platform. Worked on improving platform stability, performance and software quality while helping shape the transition towards a more modern, headless architecture. Combined solution architecture with hands-on engineering and technical guidance of the development team.",
-        keyAreas: [
-          "Solution architecture and technical direction.",
-          "Modernisation towards a headless architecture.",
-          "Sitecore 9.3 to 10.1 migration.",
-          "Platform stability, performance and software quality.",
-          "CI/CD and automated testing.",
-          "Technical guidance and support for developers.",
-          "Hands-on software development where needed.",
+          "Worked on improving and modernising Essent's online platform. The role combined architecture and hands-on development, with a focus on stability, performance and software quality.",
+        evidenceGroups: [
+          {
+            heading: "Stability & performance",
+            body: "Analysed platform stability and performance and worked on improvements to the online environment.",
+          },
+          {
+            heading: "Headless architecture",
+            body: "Advised on the transition towards a more modern headless architecture.",
+          },
+          {
+            heading: "Sitecore migration",
+            body: "Investigated and carried out the migration from Sitecore 9.3 to Sitecore 10.1.",
+          },
         ],
-        technology: ".NET / C#, Sitecore, Azure, Angular, CI/CD, automated testing",
       },
       {
         id: "freo",
         company: "Freo",
-        role: "Senior Team Lead",
-        period: "Feb 2019 — Jun 2020",
+        role: "Lead Sitecore Developer / Scrum Master",
+        period: "Feb 2019 — Jul 2020",
         homepageSummary:
-          "Led the technical evolution of freo.nl, focusing on modernisation, software quality and automated releases.",
+          "Continued development of freo.nl, personalisation and digital campaigns, with a focus on engineering quality.",
         homepageHighlights: [
-          "Modernised the platform and development practices.",
-          "Improved CI/CD and automated testing.",
-          "Provided technical guidance to the team.",
+          "Unit and UI testing and CI/CD in Azure DevOps.",
+          "Developed a WhatsApp chatbot.",
+          "Scrum Master responsibilities and support for team members.",
         ],
         webSummary:
-          "Lead consultant responsible for the development and technical evolution of freo.nl, combining software engineering with technical leadership and delivery responsibilities. Worked on modernising the platform and development process, with a strong focus on software quality, automated delivery and maintainability. In addition to hands-on development, provided technical guidance to the team and contributed to the Scrum process.",
-        keyAreas: [
-          "Development and modernisation of freo.nl.",
-          "Technical guidance within the development team.",
-          "CI/CD and automated testing.",
-          "Personalisation and digital customer experience.",
-          "Software quality and maintainability.",
-          "Scrum Master responsibilities alongside the technical role.",
+          "Worked on freo.nl, personalisation and digital campaigns, combining hands-on development with a focus on engineering quality.",
+        evidenceGroups: [
+          {
+            heading: "Digital experience",
+            body: "Continued development of freo.nl and personalisation for digital campaigns.",
+          },
+          {
+            heading: "Quality & automation",
+            body: "Strengthened the development process with unit and UI testing and CI/CD in Azure DevOps.",
+          },
+          {
+            heading: "Team & innovation",
+            body: "Supported team members and took on Scrum Master responsibilities. Also developed a WhatsApp chatbot.",
+          },
         ],
-        technology: "Sitecore, C# / .NET, Azure DevOps, CI/CD, automated testing",
       },
     ],
     earlierHeading: "Earlier experience",
-    earlierIntro:
-      "Before my current assignments, I worked in a range of lead, architecture and delivery roles across digital platforms and software development.",
-    earlierExperience: {
-      period: "2014–2019",
-      title: "DearNova — technical leadership and project delivery",
-      body: "As Senior Team Lead and Project Manager, I also held technical leadership roles at organisations including DELA, EAGE and VZVZ. My work increasingly shifted from software development towards technical leadership, architecture and team development.",
-    },
-    careerFoundation: {
-      period: "2001–2014",
-      title: "Foundation in software engineering and architecture",
-      body: "I began as a software engineer and grew into architecture and project leadership. Work with Netaspect, Atos Origin, Interpolis and Achmea gave me a broad foundation in software development and complex organisations.",
-    },
+    earlierIntro: "A concise selection of earlier assignments.",
+    earlierExperience: [
+      {
+        period: "May 2017 — Feb 2019",
+        title: "DELA Nederland (engagement via DearNova)",
+        role: "Lead Sitecore Developer / Technical Lead",
+        body: "Technical leadership across three Sitecore teams; Sitecore 8 to 9 migration, personalisation and integrations.",
+      },
+    ],
+    careerFoundation: [
+      {
+        period: "2016 — 2017",
+        title: "EAGE",
+        role: "Lead Sitecore Developer / Technical Lead",
+        body: "New digital platform, Dynamics integration, webshop, testing and CI/CD.",
+      },
+      {
+        period: "2015 — 2016",
+        title: "VZVZ",
+        role: "Lead .NET Developer / Technical Lead",
+        body: "Medical data portal, DigiD integration and code quality.",
+      },
+      {
+        period: "2014 — 2015",
+        title: "DELA",
+        role: "Lead .NET / Sitecore Developer / Scrum Master",
+        body: "Technical Lead and Scrum Master during the redevelopment of dela.nl and Mijn DELA.",
+      },
+      {
+        period: "2001 — 2013",
+        title: "Atos Origin / Achmea",
+        role: "Senior .NET Developer / Scrum Master / Project Manager",
+        body: "Assignments included ANWB, Unigarant, Achmea, Interpolis and Zilveren Kruis.",
+      },
+    ],
     technologyHeading: "Technology",
     technologyList: [
-      "Microsoft Azure",
-      "Azure DevOps",
-      "Infrastructure-as-Code",
-      "C# / .NET",
-      "React / Next.js",
-      "REST APIs / Azure API Management",
-      "Sitecore XP / SXA",
-      "Dynatrace",
-      "Application Insights",
-      "Azure AD B2C",
-      "iDIN",
-      "eHerkenning",
-      "Generative AI & MCP",
+      "Azure & DevOps",
+      "Infrastructure-as-Code & CI/CD",
+      ".NET & modern web engineering",
+      "APIs & integration platforms",
+      "CMS & digital platforms",
+      "Dynatrace & Application Insights",
+      "Identity & access",
+      "Generative AI & automation",
     ],
     viewAllCta: "Explore my experience",
   },
   about: {
     eyebrow: "About",
-    heading: "From software engineer to technology leader",
+    heading: "Engineering Lead",
     paragraphs: [
-      "I am Robin Vogels. Over more than 20 years, I have grown from software engineer and solution architect into a technology leader, with more than a decade of experience setting direction for teams and technology.",
-      "I enjoy working in complex organisations where different interests and dependencies meet. I connect technology, product and business goals, helping teams and stakeholders make clear decisions.",
-      "What energises me is bringing people, technology and ambition together: making complex challenges easier to act on, helping teams grow, and seeing improvements deliver real results.",
-      "After many years building software myself, I still like to stay close to the technology. I set direction and build trust, helping teams take ownership of outcomes that last.",
+      "I am Robin Vogels, an Engineering Lead and Solution Architect with more than 20 years in software engineering and over 10 years in technical leadership.",
+      "My career began close to the technology. From software engineering and architecture, I gradually took on more responsibility for technical direction, teams and engineering quality. That combination suits me: setting strategic direction while staying close enough to the technology to understand the choices and help teams move forward.",
+      "What energises me is bringing people, technology and ambition together. I turn complex challenges into clear choices, help engineers and technical leaders grow, and value seeing improvements make a tangible difference.",
+      "I enjoy working in complex organisations where technology matters to the business and many interests need to be brought together. I connect engineering, product and business, helping teams find clear direction, trust and ownership — with attention to quality, security, reliability and progress.",
     ],
     factsHeading: "At a glance",
     facts: [
+      "20+ years software engineering",
+      "10+ years technical leadership",
+      "Engineering Lead & Solution Architect",
       "Rosmalen, the Netherlands",
-      "Higher Informatics — Fontys University of Applied Sciences",
-      "Professional Scrum Master I",
-      "Dutch / English",
+      "Dutch & English",
     ],
     photoAlt: "Portrait photo of Robin Vogels",
   },

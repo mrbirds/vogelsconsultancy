@@ -31,31 +31,33 @@ export default async function AboutPage({
 
   return (
     <>
-      <section className="py-14 sm:py-20">
+      <section className="py-[var(--section-space)]">
         <Container>
           <p className="text-sm font-semibold uppercase tracking-wide text-brand-blue-link">
             {about.eyebrow}
           </p>
-          <h1 className="mt-3 max-w-3xl text-[2.1rem] leading-tight sm:text-5xl">
+          <h1 className="mt-3 max-w-3xl text-[clamp(2rem,4vw,3.25rem)] leading-tight">
             {about.heading}
           </h1>
 
-          <div className="mt-10 grid gap-10 lg:grid-cols-[0.6fr_1fr] lg:gap-16">
+          <div className="mt-8 grid gap-8 sm:mt-10 sm:gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-14">
             <div>
-              <div className="relative mx-auto aspect-square w-48 overflow-hidden rounded-2xl bg-surface-subtle sm:w-56 lg:mx-0 lg:aspect-[4/5] lg:w-full lg:max-w-none">
+              <div className="relative mx-auto aspect-[3/2] w-full max-w-[420px] overflow-hidden rounded-lg bg-surface-subtle lg:mx-0">
                 <Image
                   src="/images/robin-vogels-profile.jpg"
                   alt={about.photoAlt}
-                  fill
-                  sizes="(min-width: 1024px) 420px, 80vw"
-                  className="object-cover"
+                  width={1536}
+                  height={1024}
+                  loading="eager"
+                  sizes="(min-width: 1024px) 420px, (min-width: 640px) 60vw, calc(100vw - 40px)"
+                  className="h-full w-full object-contain"
                 />
               </div>
               <div className="mt-8">
                 <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">
                   {about.factsHeading}
                 </h2>
-                <ul className="mt-3 space-y-2 text-[15px] text-ink">
+                <ul className="mt-3 space-y-2 text-sm text-ink sm:text-[15px]">
                   {about.facts.map((fact) => (
                     <li key={fact}>{fact}</li>
                   ))}
@@ -63,7 +65,7 @@ export default async function AboutPage({
               </div>
             </div>
 
-            <div className="space-y-5 text-lg leading-relaxed text-ink-muted">
+            <div className="max-w-[var(--reading-width)] space-y-5 text-base leading-relaxed text-ink-muted sm:text-lg lg:pt-1">
               {about.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}

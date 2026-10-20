@@ -1,0 +1,9 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "Test-Path": true,
+        "npm run typecheck": true,
+        "npm run dev": true,
+        "npm run lint": true,
+        "npm run build": true
+    }
+}
