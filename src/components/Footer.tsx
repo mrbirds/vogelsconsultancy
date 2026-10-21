@@ -5,6 +5,7 @@ import type { FooterContent } from "@/content/types";
 import { Container } from "./Container";
 import { siteConfig } from "@/lib/site";
 import { LanguageSwitch } from "./LanguageSwitch";
+import { CookieSettingsButton } from "./CookieSettingsButton";
 
 export function Footer({
   locale,
@@ -49,6 +50,7 @@ export function Footer({
           <Link href={`/${locale}/privacy`} className="hover:text-brand-blue-link">
             {content.privacy}
           </Link>
+          <CookieSettingsButton label={content.cookieSettings} />
           <LanguageSwitch locale={locale} label={languageSwitchLabel} />
         </div>
       </Container>

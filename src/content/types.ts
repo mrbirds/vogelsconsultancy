@@ -169,6 +169,7 @@ export interface ContactContent {
 export interface FooterContent {
   tagline: string;
   privacy: string;
+  cookieSettings: string;
   rightsReserved: (year: number) => string;
 }
 
@@ -179,10 +180,12 @@ export interface PrivacyContent {
 }
 
 export interface CookieConsentContent {
-  message: string;
-  acceptAll: string;
-  rejectAll: string;
-  settingsLink: string;
+  title: string;
+  body: string;
+  accept: string;
+  reject: string;
+  moreInfo: string;
+  close: string;
 }
 
 export interface NotFoundContent {

@@ -156,44 +156,25 @@ file itself is never cropped, stretched or recoloured.
    asset's intrinsic `width`/`height` (in pixels) so its aspect ratio is
    preserved automatically.
 4. Reference it from the relevant content (`CompanyExperience.id` for a
-   featured case) — the `ClientLogoMark` component renders it wherever it's
+   featured case) — the `ClientLogoStage` component renders it wherever it's
    looked up. Per PRD §31, the earlier-experience and career-foundation
    sections intentionally do not use logos.
 
 ## Analytics & privacy
 
-Analytics is **off by default** and fully optional, per the PRD's
-privacy-by-default requirement. No analytics script loads and no cookie is
-set until a visitor has explicitly given consent.
-
-To enable it, set these environment variables (e.g. in `.env.local` or your
-hosting provider's dashboard):
-
-```bash
-NEXT_PUBLIC_ENABLE_ANALYTICS=true
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
-```
-
-Behaviour:
-
-- If either variable is missing/false, the cookie-consent banner and GA4
-  script are never rendered or requested — see
-  [`src/lib/analytics-config.ts`](src/lib/analytics-config.ts).
-- When configured, the site implements **Google Consent Mode v2**: `gtag.js`
-  is loaded with `analytics_storage`/`ad_storage` etc. default-denied, and
-  only updated to `granted` after the visitor clicks "Accept" in the consent
-  banner ([`src/components/CookieConsent.tsx`](src/components/CookieConsent.tsx),
-  [`src/components/Analytics.tsx`](src/components/Analytics.tsx)).
-- Consent choice is stored locally and persists across visits; visitors can
-  change their mind at any time (the banner reappears for anyone without a
-  stored choice).
-- The `/privacy` (and `/en/privacy`) page documents this behaviour for
-  visitors in plain language.
-
-**Privacy impact:** when analytics is enabled and consent is granted, Google
-Analytics 4 (a third-party processor under Google's standard terms) receives
-anonymised usage data. No analytics of any kind occurs when the environment
-variables are unset, or before consent is given.
+The site uses Google Analytics 4 (`G-7PWLDZ6P6M`) with **Basic Consent Mode v2**.
+The `gtag.js` script is not requested and no Analytics data is sent before a
+visitor accepts. Consent is stored in local storage under `vogels-consent`
+with a version number; visitors can accept, reject or change their choice later
+using **Cookie settings** in the footer. Advertising consent always remains
+denied. GA4 Enhanced Measurement records App Router history changes so routes
+including `/nl/...` and `/en/...` appear as separate page views; do not add
+manual page-view events, which would duplicate those hits. See
+[`src/components/Analytics.tsx`](src/components/Analytics.tsx),
+[`src/components/CookieConsent.tsx`](src/components/CookieConsent.tsx) and the
+bilingual Privacy pages for implementation details.
+Keep page loads and browser-history page views enabled under the GA4 web
+stream's Enhanced Measurement settings.
 
 ## Deployment
 
@@ -202,8 +183,8 @@ The site builds to fully static output (all routes are prerendered — see the
 on any platform that can run `next start` or serve a Next.js build, for
 example:
 
-- **Vercel** (zero-config: connect the repo, set the two analytics env vars
-  if desired, deploy).
+- **Vercel** (connect the repository and deploy; the GA4 measurement ID is
+  configured in the application and analytics remains consent-gated).
 - **Any Node host** (Azure App Service, Docker, etc.): run `npm run build`
   then `npm run start`, exposing the configured port (`PORT` env var).
 

@@ -337,6 +337,7 @@ export const en: Content = {
   footer: {
     tagline: "Independent Technology Consultant",
     privacy: "Privacy",
+    cookieSettings: "Cookie settings",
     rightsReserved: (year: number) => `© ${year} Vogels Consultancy. All rights reserved.`,
   },
   privacy: {
@@ -353,8 +354,9 @@ export const en: Content = {
       {
         heading: "Analytics and cookies",
         body: [
-          "This website only uses analytics when explicitly configured, and only after you have given consent. Without consent, no analytics or marketing cookies are placed.",
-          "When analytics is active, Google Analytics 4 is used with Google Consent Mode v2 and privacy-friendly defaults. You can change your preference at any time.",
+          "Vogels Consultancy uses Google Analytics 4, provided by Google, to understand how the website is used and to improve it. Google Analytics is loaded only after you give consent. Under this Basic Consent Mode implementation, the Analytics script is not loaded and no Analytics data is sent to Google before consent.",
+          "After consent, Google Analytics may place cookies such as _ga and _ga_*. Analytics data may include pages visited, device and browser information, approximate location and interactions with the website.",
+          "You can withdraw or change your consent using Cookie settings in the footer of every page. After withdrawal, future Analytics tracking stops and the website removes the related Analytics cookies where technically possible.",
         ],
       },
       {
@@ -366,11 +368,12 @@ export const en: Content = {
     ],
   },
   cookieConsent: {
-    message:
-      "This website only uses analytics with your consent. Without consent, no analytics cookies are placed.",
-    acceptAll: "Accept",
-    rejectAll: "Reject",
-    settingsLink: "More information",
+    title: "Cookies & analytics",
+    body: "I use Google Analytics to understand website usage and improve the site. Analytics is only enabled with your permission.",
+    accept: "Accept",
+    reject: "Reject",
+    moreInfo: "More information",
+    close: "Close",
   },
   notFound: {
     heading: "Page not found",

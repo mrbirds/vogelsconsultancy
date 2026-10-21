@@ -337,6 +337,7 @@ export const nl: Content = {
   footer: {
     tagline: "Onafhankelijk adviseur voor technologie",
     privacy: "Privacy",
+    cookieSettings: "Cookie-instellingen",
     rightsReserved: (year: number) => `© ${year} Vogels Consultancy. Alle rechten voorbehouden.`,
   },
   privacy: {
@@ -353,8 +354,9 @@ export const nl: Content = {
       {
         heading: "Bezoekstatistieken en cookies",
         body: [
-          "Deze website verzamelt alleen bezoekstatistieken wanneer dat expliciet is ingesteld en nadat je daarvoor toestemming hebt gegeven. Zonder toestemming worden er geen analytische of marketingcookies geplaatst.",
-          "Als bezoekstatistieken zijn ingeschakeld, gebeurt dat met Google Analytics 4 en Google Consent Mode v2, met privacyvriendelijke standaardinstellingen. Je kunt je voorkeur op elk moment wijzigen.",
+          "Vogels Consultancy gebruikt Google Analytics 4 van Google om te begrijpen hoe de website wordt gebruikt en om deze te verbeteren. Google Analytics wordt alleen geladen nadat je toestemming hebt gegeven. Zonder toestemming wordt het Analytics-script niet geladen en worden er geen Analyticsgegevens naar Google verzonden.",
+          "Na toestemming kan Google Analytics cookies plaatsen, zoals _ga en _ga_*. Analyticsgegevens kunnen informatie bevatten over bezochte pagina's, apparaat- en browserinformatie, geschatte locatie en interacties met de website.",
+          "Je kunt je toestemming intrekken of wijzigen via Cookie-instellingen onderaan elke pagina. Na intrekking stopt toekomstige Analytics-tracking en verwijdert de website waar technisch mogelijk de bijbehorende Analytics-cookies.",
         ],
       },
       {
@@ -366,11 +368,12 @@ export const nl: Content = {
     ],
   },
   cookieConsent: {
-    message:
-      "Deze website verzamelt alleen bezoekstatistieken met jouw toestemming. Zonder toestemming worden er geen analytische cookies geplaatst.",
-    acceptAll: "Accepteren",
-    rejectAll: "Weigeren",
-    settingsLink: "Meer informatie",
+    title: "Cookies & analytics",
+    body: "Ik gebruik Google Analytics om websitegebruik te begrijpen en de site te verbeteren. Analytics wordt alleen ingeschakeld met jouw toestemming.",
+    accept: "Accepteren",
+    reject: "Weigeren",
+    moreInfo: "Meer informatie",
+    close: "Sluiten",
   },
   notFound: {
     heading: "Pagina niet gevonden",

@@ -1,83 +1,97 @@
 "use client";
 
-import Script from "next/script";
-import { useEffect, useState } from "react";
-import { analyticsConfig, isAnalyticsConfigured } from "@/lib/analytics-config";
-import { CONSENT_EVENT, type ConsentState, getStoredConsent } from "@/lib/consent";
+import { useEffect, useRef, useState } from "react";
+import { analyticsConfig } from "@/lib/analytics-config";
+import {
+  CONSENT_EVENT,
+  type ConsentState,
+  getStoredConsent,
+  removeAnalyticsCookies,
+} from "@/lib/consent";
 
 declare global {
   interface Window {
-    dataLayer: unknown[];
-    gtag: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
+    [key: `ga-disable-${string}`]: boolean | undefined;
   }
 }
 
-/**
- * Loads Google Analytics 4 only when:
- * 1. Analytics is explicitly enabled via NEXT_PUBLIC_ENABLE_ANALYTICS + NEXT_PUBLIC_GA_ID, and
- * 2. The visitor has explicitly granted consent (Google Consent Mode v2).
- *
- * Consent defaults to "denied" for both analytics and ad storage, and the
- * gtag.js script itself is only injected after consent is granted — not
- * merely "pinged" with a denied signal — to keep behaviour unambiguous.
- */
+const deniedConsent = {
+  analytics_storage: "denied",
+  ad_storage: "denied",
+  ad_user_data: "denied",
+  ad_personalization: "denied",
+} as const;
+
 export function Analytics() {
   const [consent, setConsent] = useState<ConsentState | null>(null);
+  const previousConsent = useRef<ConsentState | null>(null);
+  const configuredSession = useRef(0);
+  const consentSession = useRef(0);
 
   useEffect(() => {
-    if (!isAnalyticsConfigured) return;
-
-    // Reading persisted consent after mount (rather than during render) is
-    // the correct pattern here: it avoids a client/server hydration
-    // mismatch, since the stored value only exists in the browser.
+    // Read browser-only storage after hydration to keep server and client markup aligned.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setConsent(getStoredConsent());
 
     const handleConsentChange = (event: Event) => {
-      const custom = event as CustomEvent<ConsentState>;
-      setConsent(custom.detail);
+      setConsent((event as CustomEvent<ConsentState>).detail);
     };
-
     window.addEventListener(CONSENT_EVENT, handleConsentChange);
     return () => window.removeEventListener(CONSENT_EVENT, handleConsentChange);
   }, []);
 
-  if (!isAnalyticsConfigured) return null;
+  useEffect(() => {
+    const disableKey = `ga-disable-${analyticsConfig.gaId}` as const;
 
-  return (
-    <>
-      <Script id="consent-mode-default" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = gtag;
-          gtag('consent', 'default', {
-            analytics_storage: 'denied',
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied',
-            wait_for_update: 500
-          });
-        `}
-      </Script>
-      {consent === "granted" ? (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${analyticsConfig.gaId}`}
-            strategy="afterInteractive"
-          />
-          <Script id="ga4-init" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              window.gtag = gtag;
-              gtag('consent', 'update', { analytics_storage: 'granted' });
-              gtag('js', new Date());
-              gtag('config', '${analyticsConfig.gaId}', { anonymize_ip: true });
-            `}
-          </Script>
-        </>
-      ) : null}
-    </>
-  );
+    if (consent !== "accepted") {
+      window[disableKey] = true;
+      if (previousConsent.current === "accepted") {
+        window.gtag?.("consent", "update", deniedConsent);
+      }
+      removeAnalyticsCookies();
+      previousConsent.current = consent;
+      return;
+    }
+
+    if (previousConsent.current !== "accepted") {
+      consentSession.current += 1;
+    }
+    previousConsent.current = "accepted";
+    window[disableKey] = false;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag =
+      window.gtag ||
+      function gtag() {
+        // eslint-disable-next-line prefer-rest-params -- gtag expects the native Arguments object.
+        window.dataLayer?.push(arguments);
+      };
+
+    if (configuredSession.current !== consentSession.current) {
+      window.gtag("consent", "default", deniedConsent);
+      window.gtag("consent", "update", {
+        analytics_storage: "granted",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+      });
+      window.gtag("js", new Date());
+      window.gtag("config", analyticsConfig.gaId);
+
+      const scriptId = "vogels-ga4-script";
+      if (!document.getElementById(scriptId)) {
+        const script = document.createElement("script");
+        script.id = scriptId;
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${analyticsConfig.gaId}`;
+        script.onerror = () => console.error("Google Analytics failed to load.");
+        document.head.appendChild(script);
+      }
+      configuredSession.current = consentSession.current;
+    }
+  }, [consent]);
+
+  return null;
 }

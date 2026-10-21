@@ -1,8 +1,3 @@
 export const analyticsConfig = {
-  enabled: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === "true",
-  gaId: process.env.NEXT_PUBLIC_GA_ID ?? "",
+  gaId: "G-7PWLDZ6P6M",
 };
-
-export const isAnalyticsConfigured = Boolean(
-  analyticsConfig.enabled && analyticsConfig.gaId,
-);

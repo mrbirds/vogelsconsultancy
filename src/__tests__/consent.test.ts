@@ -1,5 +1,11 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { CONSENT_EVENT, getStoredConsent, storeConsent } from "@/lib/consent";
+import {
+  CONSENT_EVENT,
+  CONSENT_STORAGE_KEY,
+  CONSENT_VERSION,
+  getStoredConsent,
+  storeConsent,
+} from "@/lib/consent";
 
 describe("consent storage", () => {
   beforeEach(() => {
@@ -10,25 +16,46 @@ describe("consent storage", () => {
     expect(getStoredConsent()).toBeNull();
   });
 
-  it("persists a granted decision and reads it back", () => {
-    storeConsent("granted");
-    expect(getStoredConsent()).toBe("granted");
+  it("persists an accepted decision in the versioned consent schema", () => {
+    storeConsent("accepted");
+    expect(getStoredConsent()).toBe("accepted");
+    expect(JSON.parse(localStorage.getItem(CONSENT_STORAGE_KEY) ?? "")).toEqual({
+      analytics: true,
+      version: CONSENT_VERSION,
+    });
   });
 
-  it("persists a denied decision and reads it back", () => {
-    storeConsent("denied");
-    expect(getStoredConsent()).toBe("denied");
+  it("persists a rejected decision in the versioned consent schema", () => {
+    storeConsent("rejected");
+    expect(getStoredConsent()).toBe("rejected");
+    expect(JSON.parse(localStorage.getItem(CONSENT_STORAGE_KEY) ?? "")).toEqual({
+      analytics: false,
+      version: CONSENT_VERSION,
+    });
+  });
+
+  it("asks again when the stored consent schema version is outdated", () => {
+    localStorage.setItem(
+      CONSENT_STORAGE_KEY,
+      JSON.stringify({ analytics: true, version: CONSENT_VERSION - 1 }),
+    );
+    expect(getStoredConsent()).toBeNull();
+  });
+
+  it("asks again when the stored consent value is malformed", () => {
+    localStorage.setItem(CONSENT_STORAGE_KEY, "{");
+    expect(getStoredConsent()).toBeNull();
   });
 
   it("dispatches a consent-change event when the decision changes", () => {
     const handler = vi.fn();
     window.addEventListener(CONSENT_EVENT, handler);
 
-    storeConsent("granted");
+    storeConsent("accepted");
 
     expect(handler).toHaveBeenCalledTimes(1);
     const event = handler.mock.calls[0][0] as CustomEvent<string>;
-    expect(event.detail).toBe("granted");
+    expect(event.detail).toBe("accepted");
 
     window.removeEventListener(CONSENT_EVENT, handler);
   });
