@@ -32,7 +32,7 @@ export function ExpertisePageContentView({
             {content.areas.map((area, index) => (
               <article
                 key={area.id}
-                className="grid gap-x-8 gap-y-4 border-t border-border py-7 sm:grid-cols-[3rem_minmax(0,1fr)] sm:py-9 lg:grid-cols-[4rem_minmax(16rem,0.9fr)_minmax(0,1.1fr)] lg:gap-x-10"
+                className="grid gap-x-6 gap-y-4 border-t border-border py-7 sm:grid-cols-[2.5rem_minmax(0,1fr)] sm:py-8 lg:grid-cols-[4rem_minmax(16rem,0.9fr)_minmax(0,1.1fr)] lg:gap-x-10 lg:py-9"
               >
                 <p className="text-sm font-semibold tracking-wide text-brand-blue-link">
                   {String(index + 1).padStart(2, "0")}
@@ -45,7 +45,7 @@ export function ExpertisePageContentView({
                     {area.statement}
                   </p>
                 </div>
-                <ul className="grid gap-x-6 gap-y-3 sm:grid-cols-2 lg:grid-cols-1">
+                <ul className="grid gap-x-6 gap-y-3 sm:col-span-2 sm:grid-cols-2 lg:col-span-1 lg:grid-cols-1">
                   {area.capabilities.map((capability) => (
                     <li
                       key={capability}

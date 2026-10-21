@@ -1,6 +1,6 @@
 import type { CompanyExperience } from "@/content/types";
 import { clientLogos } from "@/content/clients";
-import { ClientLogoMark, primaryLogoClassName } from "./ClientLogoMark";
+import { ClientLogoStage } from "./ClientLogoStage";
 
 export function ExperienceDetail({ company }: { company: CompanyExperience }) {
   const logo = clientLogos.find((entry) => entry.id === company.id);
@@ -12,8 +12,8 @@ export function ExperienceDetail({ company }: { company: CompanyExperience }) {
     >
       <div>
         {logo ? (
-          <div className="relative mb-3 flex h-12 w-[140px] shrink-0 items-center justify-start sm:mb-5 sm:h-16 sm:w-[180px] sm:justify-start">
-            <ClientLogoMark logo={logo} className={primaryLogoClassName(company.id)} />
+          <div className="mb-2 sm:mb-4">
+            <ClientLogoStage logo={logo} />
           </div>
         ) : null}
         <h3 className="sr-only">{company.company}</h3>
@@ -26,16 +26,59 @@ export function ExperienceDetail({ company }: { company: CompanyExperience }) {
           {company.webSummary}
         </p>
 
-        {company.evidenceGroups ? (
-          <ul className="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-2 sm:gap-y-6">
-            {company.evidenceGroups.map((group) => (
-              <li key={group.heading} className="border-t border-border pt-3">
-                <h4 className="text-sm font-semibold text-ink">{group.heading}</h4>
-                <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{group.body}</p>
+        {company.caseStudy.kind === "featured" ? (
+          <div className="mt-6 max-w-[var(--reading-width)]">
+            <section>
+              <h4 className="text-xs font-semibold uppercase tracking-wide text-brand-blue-link">
+                {company.caseStudy.labels.leadership}
+              </h4>
+              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                {company.caseStudy.leadership}
+              </p>
+            </section>
+
+            <section className="mt-5 border-t border-border pt-4">
+              <h4 className="text-xs font-semibold uppercase tracking-wide text-brand-blue-link">
+                {company.caseStudy.labels.architecture}
+              </h4>
+              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                {company.caseStudy.architecture}
+              </p>
+            </section>
+
+            <section className="mt-5 border-l-2 border-brand-blue pl-4 sm:pl-5">
+              <p className="text-xs font-semibold uppercase tracking-wide text-brand-blue-link">
+                {company.caseStudy.labels.engineering}
+              </p>
+              <p className="mt-2 text-xl font-semibold leading-snug tracking-tight text-ink sm:text-2xl">
+                {company.caseStudy.result}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                {company.caseStudy.resultDetail}
+              </p>
+            </section>
+
+            <section className="mt-5 border-t border-border pt-4">
+              <h4 className="text-xs font-semibold uppercase tracking-wide text-brand-blue-link">
+                {company.caseStudy.labels.business}
+              </h4>
+              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                {company.caseStudy.business}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                {company.caseStudy.engineeringMaturity}
+              </p>
+            </section>
+          </div>
+        ) : (
+          <ul className="mt-5 max-w-[var(--reading-width)] divide-y divide-border border-y border-border">
+            {company.caseStudy.contributions.map((contribution) => (
+              <li key={contribution} className="py-3 text-sm leading-relaxed text-ink">
+                {contribution}
               </li>
             ))}
           </ul>
-        ) : null}
+        )}
       </div>
     </article>
   );

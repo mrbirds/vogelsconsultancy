@@ -1,15 +1,15 @@
 import type { CompanyExperience } from "@/content/types";
 import { clientLogos } from "@/content/clients";
-import { ClientLogoMark, primaryLogoClassName } from "./ClientLogoMark";
+import { ClientLogoStage } from "./ClientLogoStage";
 
 export function ExperienceCard({ company }: { company: CompanyExperience }) {
   const logo = clientLogos.find((entry) => entry.id === company.id);
 
   return (
-    <article className="flex flex-col border-t border-border pt-6">
+    <article className="flex flex-col border-t border-border pt-5 sm:pt-6">
       {logo ? (
-        <div className="relative mb-4 flex h-12 w-[140px] shrink-0 items-center justify-start sm:mb-5 sm:h-16 sm:w-[180px] sm:justify-center">
-          <ClientLogoMark logo={logo} className={primaryLogoClassName(company.id)} />
+        <div className="mb-3 sm:mb-4">
+          <ClientLogoStage logo={logo} />
         </div>
       ) : null}
       {/* The logo already communicates the company name visually, so it is not
@@ -20,8 +20,8 @@ export function ExperienceCard({ company }: { company: CompanyExperience }) {
         <p className="text-sm font-medium leading-snug text-brand-blue-link">{company.role}</p>
         <p className="text-sm text-ink-muted">{company.period}</p>
       </div>
-      <p className="mt-4 leading-relaxed text-ink-muted">{company.homepageSummary}</p>
-      <ul className="mt-5 space-y-2 text-sm text-ink">
+      <p className="mt-3 text-sm leading-relaxed text-ink-muted">{company.homepageSummary}</p>
+      <ul className="mt-3 space-y-1.5 text-xs leading-relaxed text-ink sm:text-sm">
         {company.homepageHighlights.map((highlight) => (
           <li key={highlight} className="flex gap-2">
             <span aria-hidden="true" className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue" />

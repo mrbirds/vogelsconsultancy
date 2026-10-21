@@ -35,15 +35,12 @@ export default async function ExperiencePage({
     <>
       <PageHero eyebrow={experience.eyebrow} heading={experience.heading} intro={experience.intro} />
 
-      <section className="py-[var(--section-space)]" aria-labelledby="selected-experience-heading">
+      <section
+        className="py-[var(--section-space)]"
+        aria-label={experience.selectedHeading}
+      >
         <Container className="max-w-5xl">
-          <SectionHeading
-            id="selected-experience-heading"
-            heading={experience.selectedHeading}
-            intro={experience.selectedIntro}
-          />
-
-          <div className="mt-9 sm:mt-11">
+          <div>
             {experience.companies.map((company) => (
               <ExperienceDetail key={company.id} company={company} />
             ))}

@@ -7,6 +7,8 @@ export interface ClientLogo {
   /** Intrinsic pixel dimensions of the source asset, used to render it at its original aspect ratio. */
   width?: number;
   height?: number;
+  /** Small optical adjustment for differences in the supplied artwork's visual density. */
+  visualScale?: number;
 }
 
 /**
@@ -32,6 +34,7 @@ export const clientLogos: ClientLogo[] = [
     logoFile: "/images/clients/dela-logo.png",
     width: 3500,
     height: 1057,
+    visualScale: 1,
   },
   {
     id: "essent",
@@ -40,6 +43,7 @@ export const clientLogos: ClientLogo[] = [
     logoFile: "/images/clients/essent.png",
     width: 1193,
     height: 272,
+    visualScale: 1.08,
   },
   {
     id: "freo",
@@ -48,6 +52,7 @@ export const clientLogos: ClientLogo[] = [
     logoFile: "/images/clients/freo.jpg",
     width: 815,
     height: 340,
+    visualScale: 0.78,
   },
   {
     id: "eage",

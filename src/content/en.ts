@@ -183,32 +183,33 @@ export const en: Content = {
         role: "Engineering Lead & Solution Architect",
         period: "2021 — present",
         homepageSummary:
-          "Technical responsibility for three multidisciplinary teams and approximately 21 professionals in DELA's online engineering domain.",
+          "Technical leadership across three multidisciplinary teams and approximately 21 professionals in DELA's online engineering domain.",
         homepageHighlights: [
-          "Moved from fortnightly releases to multiple deployments a day.",
-          "Set technical vision and architecture across three teams and the online domain.",
-          "Modernised the digital landscape and expanded Infrastructure-as-Code.",
+          "From fortnightly releases to multiple deployments a day.",
+          "Future-state architecture and modernisation of the digital landscape.",
         ],
         webSummary:
           "Across DELA's online engineering domain — from dela.nl and Mijn DELA to intermediary portals, digital customer journeys and integration platforms — I set technical direction for three multidisciplinary teams and approximately 21 professionals.",
-        evidenceGroups: [
-          {
-            heading: "Leadership & organisation",
-            body: "Coaches Tech Leads and engineers, shaping technical vision, ownership and consistent engineering practices across three teams.",
+        caseStudy: {
+          kind: "featured",
+          labels: {
+            leadership: "Technical leadership",
+            architecture: "Platform & architecture",
+            engineering: "Engineering improvement",
+            business: "Business & innovation",
           },
-          {
-            heading: "Business & innovation",
-            body: "Connects technology, product and business, advising on feasibility, risk, security, compliance and solution direction. Applies generative AI practically in development, code reviews, prototyping and tooling.",
-          },
-          {
-            heading: "Engineering excellence",
-            body: "Improved the release cycle from fortnightly to multiple deployments a day. Infrastructure-as-Code, releases decoupled by application component and observability with Dynatrace and Application Insights support further improvement.",
-          },
-          {
-            heading: "Architecture & digital landscape",
-            body: "Shapes future-state architecture and modernisation from legacy Sitecore/MVC towards modern web, API and Azure architectures, including CMS platform evaluation and selection.",
-          },
-        ],
+          leadership:
+            "Sets technical direction and engineering strategy across three teams. Coaches Tech Leads and engineers, develops shared standards and connects engineering, product, architecture and business.",
+          architecture:
+            "Shapes future-state architecture and modernisation from legacy Sitecore/MVC towards modern web, API and Azure architectures. Evaluates CMS and platform choices in the wider DELA context.",
+          result: "From fortnightly releases to multiple deployments a day.",
+          resultDetail:
+            "Improved CI/CD, independently deployable application components and further adoption of Infrastructure-as-Code made this possible.",
+          business:
+            "Translates business and compliance requirements into technical choices. Applies generative AI practically in development, code reviews, prototyping and tooling.",
+          engineeringMaturity:
+            "Observability with Dynatrace and Application Insights supports analysis, reliability and continued improvement.",
+        },
       },
       {
         id: "essent",
@@ -216,27 +217,20 @@ export const en: Content = {
         role: "Lead Consultant / Solution Architect",
         period: "Jul 2020 — Apr 2022",
         homepageSummary:
-          "Improved and modernised the online platform, focusing on stability, performance, architecture and hands-on development.",
+          "Architecture and hands-on development to improve the stability, performance and modernisation of the online platform.",
         homepageHighlights: [
-          "Analysed stability and performance; advised on headless architecture.",
-          "Investigated and carried out the Sitecore 9.3 to 10.1 migration.",
+          "Headless architecture advice and Sitecore 9.3 to 10.1 migration.",
         ],
         webSummary:
           "Worked on improving and modernising Essent's online platform. The role combined architecture and hands-on development, with a focus on stability, performance and software quality.",
-        evidenceGroups: [
-          {
-            heading: "Stability & performance",
-            body: "Analysed platform stability and performance and worked on improvements to the online environment.",
-          },
-          {
-            heading: "Headless architecture",
-            body: "Advised on the transition towards a more modern headless architecture.",
-          },
-          {
-            heading: "Sitecore migration",
-            body: "Investigated and carried out the migration from Sitecore 9.3 to Sitecore 10.1.",
-          },
-        ],
+        caseStudy: {
+          kind: "narrative",
+          contributions: [
+            "Analysed online platform stability and performance and worked on practical improvements.",
+            "Advised on the move towards headless architecture, alongside hands-on technical guidance.",
+            "Investigated and carried out the migration from Sitecore 9.3 to Sitecore 10.1.",
+          ],
+        },
       },
       {
         id: "freo",
@@ -244,28 +238,21 @@ export const en: Content = {
         role: "Lead Sitecore Developer / Scrum Master",
         period: "Feb 2019 — Jul 2020",
         homepageSummary:
-          "Continued development of freo.nl, personalisation and digital campaigns, with a focus on engineering quality.",
+          "Continued development of freo.nl and digital campaigns, including personalisation and engineering quality.",
         homepageHighlights: [
-          "Unit and UI testing and CI/CD in Azure DevOps.",
-          "Developed a WhatsApp chatbot.",
-          "Scrum Master responsibilities and support for team members.",
+          "Unit and UI testing, CI/CD in Azure DevOps and a WhatsApp chatbot.",
+          "Scrum Master responsibilities and coaching support for the team.",
         ],
         webSummary:
           "Worked on freo.nl, personalisation and digital campaigns, combining hands-on development with a focus on engineering quality.",
-        evidenceGroups: [
-          {
-            heading: "Digital experience",
-            body: "Continued development of freo.nl and personalisation for digital campaigns.",
-          },
-          {
-            heading: "Quality & automation",
-            body: "Strengthened the development process with unit and UI testing and CI/CD in Azure DevOps.",
-          },
-          {
-            heading: "Team & innovation",
-            body: "Supported team members and took on Scrum Master responsibilities. Also developed a WhatsApp chatbot.",
-          },
-        ],
+        caseStudy: {
+          kind: "narrative",
+          contributions: [
+            "Continued development of freo.nl, personalisation and digital campaigns.",
+            "Improved engineering quality with unit and UI testing and CI/CD in Azure DevOps.",
+            "Developed a WhatsApp chatbot and supported team members as Scrum Master.",
+          ],
+        },
       },
     ],
     earlierHeading: "Earlier experience",
@@ -321,10 +308,10 @@ export const en: Content = {
     eyebrow: "About",
     heading: "Engineering Lead",
     paragraphs: [
-      "I am Robin Vogels, an Engineering Lead and Solution Architect with more than 20 years in software engineering and over 10 years in technical leadership.",
-      "My career began close to the technology. From software engineering and architecture, I gradually took on more responsibility for technical direction, teams and engineering quality. That combination suits me: setting strategic direction while staying close enough to the technology to understand the choices and help teams move forward.",
-      "What energises me is bringing people, technology and ambition together. I turn complex challenges into clear choices, help engineers and technical leaders grow, and value seeing improvements make a tangible difference.",
-      "I enjoy working in complex organisations where technology matters to the business and many interests need to be brought together. I connect engineering, product and business, helping teams find clear direction, trust and ownership — with attention to quality, security, reliability and progress.",
+      "I am Robin Vogels. I am interested in how technical decisions work out in practice for the people and teams who rely on them.",
+      "My experience as an engineer, architect and technical leader helps me consider both the direction an organisation needs and the day-to-day reality of its teams and systems.",
+      "I am energised by complex challenges that call for collaboration: understanding different interests, turning options into clear choices and working with engineers and technical leaders to make improvements that last.",
+      "My approach balances clarity with trust. Teams need direction, but they also need room to take responsibility, make decisions and keep developing their craft.",
     ],
     factsHeading: "At a glance",
     facts: [

@@ -14,7 +14,7 @@ export function Header({ locale, nav }: { locale: Locale; nav: NavContent }) {
 
   return (
     <header className="relative z-40 border-b border-border bg-surface">
-      <Container className="flex h-[4.5rem] items-center justify-between sm:h-20">
+      <Container className="flex h-20 items-center justify-between sm:h-24">
         <Logo locale={locale} />
         <SiteNav
           locale={locale}

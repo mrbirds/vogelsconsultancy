@@ -95,8 +95,26 @@ export interface CompanyExperience {
   /** Concise homepage bullets — maximum three, per PRD §32. */
   homepageHighlights: string[];
   webSummary: string;
-  /** Selected, case-specific evidence for the full Experience page. */
-  evidenceGroups: { heading: string; body: string }[];
+  caseStudy:
+    | {
+        kind: "featured";
+        labels: {
+          leadership: string;
+          architecture: string;
+          engineering: string;
+          business: string;
+        };
+        leadership: string;
+        architecture: string;
+        business: string;
+        result: string;
+        resultDetail: string;
+        engineeringMaturity: string;
+      }
+    | {
+        kind: "narrative";
+        contributions: string[];
+      };
 }
 
 export interface ExperiencePeriodBlock {

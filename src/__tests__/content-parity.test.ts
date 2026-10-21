@@ -112,27 +112,29 @@ describe("content parity between nl and en", () => {
   it("keeps the Experience cases concise and evidence-led", () => {
     for (const content of [nl, en]) {
       const [dela, essent, freo] = content.experience.companies;
-      expect(dela.evidenceGroups).toHaveLength(4);
-      expect(essent.evidenceGroups).toHaveLength(3);
-      expect(freo.evidenceGroups).toHaveLength(3);
+      expect(dela.caseStudy.kind).toBe("featured");
+      expect(essent.caseStudy.kind).toBe("narrative");
+      expect(freo.caseStudy.kind).toBe("narrative");
+      expect(essent.caseStudy.kind === "narrative" && essent.caseStudy.contributions).toHaveLength(3);
+      expect(freo.caseStudy.kind === "narrative" && freo.caseStudy.contributions).toHaveLength(3);
       expect(content.experience.earlierExperience.length).toBe(1);
       expect(content.experience.careerFoundation.length).toBe(4);
     }
 
-    expect(nl.experience.companies[0].evidenceGroups.map(({ heading }) => heading)).toEqual([
-      "Leiderschap & organisatie",
-      "Business & innovatie",
-      "Engineering Excellence",
-      "Architectuur & digitaal landschap",
-    ]);
-    expect(en.experience.companies[0].evidenceGroups.map(({ heading }) => heading)).toEqual([
-      "Leadership & organisation",
-      "Business & innovation",
-      "Engineering excellence",
-      "Architecture & digital landscape",
-    ]);
-    expect(nl.experience.companies[1].evidenceGroups[2].body).toContain("Sitecore 9.3");
-    expect(en.experience.companies[2].evidenceGroups[2].body).toContain("WhatsApp chatbot");
+    const delaNl = nl.experience.companies[0].caseStudy;
+    const delaEn = en.experience.companies[0].caseStudy;
+    expect(delaNl.kind).toBe("featured");
+    expect(delaEn.kind).toBe("featured");
+    if (delaNl.kind === "featured" && delaEn.kind === "featured") {
+      expect(delaNl.result).toContain("tweewekelijkse releases");
+      expect(delaEn.result).toContain("fortnightly releases");
+      expect(delaNl.business).toContain("generatieve AI");
+      expect(delaEn.business).toContain("generative AI");
+    }
+    const essentNl = nl.experience.companies[1].caseStudy;
+    const freoEn = en.experience.companies[2].caseStudy;
+    expect(essentNl.kind === "narrative" && essentNl.contributions[2]).toContain("Sitecore 9.3");
+    expect(freoEn.kind === "narrative" && freoEn.contributions[2]).toContain("WhatsApp chatbot");
   });
 
   it("keeps About facts aligned in both locales", () => {

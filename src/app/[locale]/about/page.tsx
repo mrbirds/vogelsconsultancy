@@ -40,20 +40,18 @@ export default async function AboutPage({
             {about.heading}
           </h1>
 
-          <div className="mt-8 grid gap-8 sm:mt-10 sm:gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-14">
+          <div className="mt-8 grid gap-8 sm:mt-10 sm:gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] lg:gap-14">
             <div>
-              <div className="relative mx-auto aspect-[3/2] w-full max-w-[420px] overflow-hidden rounded-lg bg-surface-subtle lg:mx-0">
-                <Image
-                  src="/images/robin-vogels-profile.jpg"
-                  alt={about.photoAlt}
-                  width={1536}
-                  height={1024}
-                  loading="eager"
-                  sizes="(min-width: 1024px) 420px, (min-width: 640px) 60vw, calc(100vw - 40px)"
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <div className="mt-8">
+              <Image
+                src="/images/robin-vogels-profile.jpg"
+                alt={about.photoAlt}
+                width={1536}
+                height={1024}
+                loading="eager"
+                sizes="(min-width: 1024px) 340px, (min-width: 640px) 320px, 320px"
+                className="mx-auto block h-auto w-full max-w-[320px] lg:mx-0 lg:max-w-[340px]"
+              />
+              <div className="mx-auto mt-6 max-w-[320px] lg:mx-0 lg:mt-7">
                 <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">
                   {about.factsHeading}
                 </h2>

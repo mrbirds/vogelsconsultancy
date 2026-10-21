@@ -15,16 +15,22 @@ export function Approach({ content }: { content: ApproachContent }) {
           <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">{content.intro}</p>
         </div>
 
-        <ol className="mt-9 grid gap-x-8 gap-y-8 sm:mt-11 sm:grid-cols-2 lg:grid-cols-4">
-          {content.principles.map((principle) => (
-            <li key={principle.title} className="border-t border-border pt-5">
-              <h3 className="text-lg font-semibold">{principle.title}</h3>
-              <p className="mt-2 text-[15px] leading-relaxed text-ink-muted">{principle.body}</p>
+        <ol className="mt-9 divide-y divide-border border-y border-border sm:mt-11">
+          {content.principles.map((principle, index) => (
+            <li
+              key={principle.title}
+              className="grid gap-x-5 gap-y-2 py-4 sm:grid-cols-[2.5rem_minmax(0,0.65fr)_minmax(0,1.35fr)] sm:items-start sm:gap-x-8 sm:py-5"
+            >
+              <span className="text-xs font-semibold tracking-wide text-brand-blue-link">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3 className="text-base font-semibold sm:text-lg">{principle.title}</h3>
+              <p className="text-sm leading-relaxed text-ink-muted sm:text-[15px]">{principle.body}</p>
             </li>
           ))}
         </ol>
 
-        <p className="mt-12 text-lg font-semibold text-ink">{content.closing}</p>
+        <p className="mt-8 text-base font-semibold text-ink sm:mt-10 sm:text-lg">{content.closing}</p>
       </Container>
     </section>
   );
