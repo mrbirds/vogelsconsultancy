@@ -8,7 +8,6 @@ import {
   COOKIE_SETTINGS_EVENT,
   getStoredConsent,
   storeConsent,
-  type ConsentState,
 } from "@/lib/consent";
 
 interface CookieConsentProps {
@@ -37,8 +36,8 @@ export function CookieConsent({ content, locale }: CookieConsentProps) {
     return () => window.removeEventListener(COOKIE_SETTINGS_EVENT, openSettings);
   }, []);
 
-  const handleChoice = (choice: ConsentState) => {
-    storeConsent(choice);
+  const handleChoice = (analytics: boolean) => {
+    storeConsent(analytics);
     setCanClose(true);
     setVisible(false);
   };
@@ -71,20 +70,20 @@ export function CookieConsent({ content, locale }: CookieConsentProps) {
           href={`/${locale}/privacy`}
           className="font-medium text-brand-blue-link underline underline-offset-2"
         >
-          {content.moreInfo}
+          {content.privacyPolicy}
         </Link>
       </p>
       <div className="mt-4 flex gap-2 sm:mt-5 sm:justify-end sm:gap-3">
         <button
           type="button"
-          onClick={() => handleChoice("rejected")}
+          onClick={() => handleChoice(false)}
           className="min-h-10 flex-1 rounded-full border border-border px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-ink sm:flex-none sm:px-5"
         >
           {content.reject}
         </button>
         <button
           type="button"
-          onClick={() => handleChoice("accepted")}
+          onClick={() => handleChoice(true)}
           className="min-h-10 flex-1 rounded-full bg-brand-blue px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-blue/90 sm:flex-none sm:px-5"
         >
           {content.accept}

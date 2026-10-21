@@ -3,14 +3,17 @@ export const CONSENT_EVENT = "vogels-consent-change";
 export const COOKIE_SETTINGS_EVENT = "vogels-cookie-settings";
 export const CONSENT_VERSION = 1;
 
-export type ConsentState = "accepted" | "rejected";
+export interface ConsentPreferences {
+  necessary: true;
+  analytics: boolean;
+}
 
 interface StoredConsent {
   analytics: boolean;
   version: number;
 }
 
-export function getStoredConsent(): ConsentState | null {
+export function getStoredConsent(): ConsentPreferences | null {
   if (typeof window === "undefined") return null;
 
   const value = window.localStorage.getItem(CONSENT_STORAGE_KEY);
@@ -34,18 +37,25 @@ export function getStoredConsent(): ConsentState | null {
     return null;
   }
 
-  return stored.analytics ? "accepted" : "rejected";
+  return {
+    necessary: true,
+    analytics: stored.analytics,
+  };
 }
 
-export function storeConsent(state: ConsentState): void {
+export function storeConsent(analytics: boolean): void {
   if (typeof window === "undefined") return;
 
   const value: StoredConsent = {
-    analytics: state === "accepted",
+    analytics,
     version: CONSENT_VERSION,
   };
   window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(value));
-  window.dispatchEvent(new CustomEvent(CONSENT_EVENT, { detail: state }));
+  window.dispatchEvent(
+    new CustomEvent<ConsentPreferences>(CONSENT_EVENT, {
+      detail: { necessary: true, analytics },
+    }),
+  );
 }
 
 export function removeAnalyticsCookies(): void {

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { analyticsConfig } from "@/lib/analytics-config";
 import {
   CONSENT_EVENT,
-  type ConsentState,
+  type ConsentPreferences,
   getStoredConsent,
   removeAnalyticsCookies,
 } from "@/lib/consent";
@@ -25,8 +25,8 @@ const deniedConsent = {
 } as const;
 
 export function Analytics() {
-  const [consent, setConsent] = useState<ConsentState | null>(null);
-  const previousConsent = useRef<ConsentState | null>(null);
+  const [consent, setConsent] = useState<ConsentPreferences | null>(null);
+  const previousConsent = useRef<boolean | null>(null);
   const configuredSession = useRef(0);
   const consentSession = useRef(0);
 
@@ -36,7 +36,7 @@ export function Analytics() {
     setConsent(getStoredConsent());
 
     const handleConsentChange = (event: Event) => {
-      setConsent((event as CustomEvent<ConsentState>).detail);
+      setConsent((event as CustomEvent<ConsentPreferences>).detail);
     };
     window.addEventListener(CONSENT_EVENT, handleConsentChange);
     return () => window.removeEventListener(CONSENT_EVENT, handleConsentChange);
@@ -45,20 +45,20 @@ export function Analytics() {
   useEffect(() => {
     const disableKey = `ga-disable-${analyticsConfig.gaId}` as const;
 
-    if (consent !== "accepted") {
+    if (consent?.analytics !== true) {
       window[disableKey] = true;
-      if (previousConsent.current === "accepted") {
+      if (previousConsent.current === true) {
         window.gtag?.("consent", "update", deniedConsent);
       }
       removeAnalyticsCookies();
-      previousConsent.current = consent;
+      previousConsent.current = consent?.analytics ?? null;
       return;
     }
 
-    if (previousConsent.current !== "accepted") {
+    if (previousConsent.current !== true) {
       consentSession.current += 1;
     }
-    previousConsent.current = "accepted";
+    previousConsent.current = true;
     window[disableKey] = false;
 
     window.dataLayer = window.dataLayer || [];

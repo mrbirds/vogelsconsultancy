@@ -354,9 +354,9 @@ export const en: Content = {
       {
         heading: "Analytics and cookies",
         body: [
-          "Vogels Consultancy uses Google Analytics 4, provided by Google, to understand how the website is used and to improve it. Google Analytics is loaded only after you give consent. Under this Basic Consent Mode implementation, the Analytics script is not loaded and no Analytics data is sent to Google before consent.",
-          "After consent, Google Analytics may place cookies such as _ga and _ga_*. Analytics data may include pages visited, device and browser information, approximate location and interactions with the website.",
-          "You can withdraw or change your consent using Cookie settings in the footer of every page. After withdrawal, future Analytics tracking stops and the website removes the related Analytics cookies where technically possible.",
+          "The website uses necessary functionality and storage to remember your cookie preference. Optional analytics are enabled only after you give consent.",
+          "Google Analytics 4, provided by Google, is currently used to understand website usage and performance. After consent, cookies such as _ga and _ga_* may be created.",
+          "You can change or withdraw your consent at any time using Cookie settings in the footer.",
         ],
       },
       {
@@ -368,11 +368,11 @@ export const en: Content = {
     ],
   },
   cookieConsent: {
-    title: "Cookies & analytics",
-    body: "I use Google Analytics to understand website usage and improve the site. Analytics is only enabled with your permission.",
-    accept: "Accept",
+    title: "Cookies on this website",
+    body: "This website uses essential cookies to function properly and, with your consent, analytics cookies to measure and improve usage and performance.",
+    accept: "Allow",
     reject: "Reject",
-    moreInfo: "More information",
+    privacyPolicy: "Privacy policy",
     close: "Close",
   },
   notFound: {

@@ -184,7 +184,7 @@ export interface CookieConsentContent {
   body: string;
   accept: string;
   reject: string;
-  moreInfo: string;
+  privacyPolicy: string;
   close: string;
 }
 

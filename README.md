@@ -162,11 +162,13 @@ file itself is never cropped, stretched or recoloured.
 
 ## Analytics & privacy
 
-The site uses Google Analytics 4 (`G-7PWLDZ6P6M`) with **Basic Consent Mode v2**.
-The `gtag.js` script is not requested and no Analytics data is sent before a
-visitor accepts. Consent is stored in local storage under `vogels-consent`
-with a version number; visitors can accept, reject or change their choice later
-using **Cookie settings** in the footer. Advertising consent always remains
+The consent interface describes necessary and optional analytics categories;
+necessary functionality is always enabled, while analytics requires explicit
+consent. Preferences are stored in local storage under `vogels-consent` with a
+version number and can be changed later using **Cookie settings** in the footer.
+Google Analytics 4 (`G-7PWLDZ6P6M`) is the current analytics implementation
+and uses **Basic Consent Mode v2**. The `gtag.js` script is not requested and
+no Analytics data is sent before consent. Advertising consent always remains
 denied. GA4 Enhanced Measurement records App Router history changes so routes
 including `/nl/...` and `/en/...` appear as separate page views; do not add
 manual page-view events, which would duplicate those hits. See
@@ -258,7 +260,7 @@ Cross-referenced against PRD §27 at the end of implementation:
 - [x] SEO: per-locale canonical URLs, hreflang alternates (incl. `x-default`),
       `/sitemap.xml`, `/robots.txt`, unique titles/descriptions, and valid
       `Person`/`ProfessionalService` JSON-LD.
-- [x] Analytics is optional, env-var gated, and consent-aware (Consent Mode v2).
+- [x] Analytics is optional, category-based, and consent-aware (Consent Mode v2).
 - [x] Accessibility (WCAG 2.2 AA) and Core Web Vitals addressed (static
       generation, `next/image`, `next/font`, minimal client JS).
 - [x] No fabricated copy or placeholder content.

@@ -7,11 +7,11 @@ import {
 } from "@/lib/consent";
 
 const content = {
-  title: "Cookies & analytics",
-  body: "Analytics is only enabled with permission.",
-  accept: "Accept",
+  title: "Cookies on this website",
+  body: "Essential cookies are always used; analytics cookies require consent.",
+  accept: "Allow",
   reject: "Reject",
-  moreInfo: "More information",
+  privacyPolicy: "Privacy policy",
   close: "Close",
 };
 
@@ -43,8 +43,8 @@ describe("cookie consent controls", () => {
     await waitFor(() => expect(screen.queryByRole("region")).not.toBeInTheDocument());
     window.dispatchEvent(new Event(COOKIE_SETTINGS_EVENT));
 
-    expect(await screen.findByRole("button", { name: "Accept" })).toBeInTheDocument();
-    fireEvent.click(screen.getByRole("button", { name: "Accept" }));
+    expect(await screen.findByRole("button", { name: "Allow" })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "Allow" }));
 
     await waitFor(() =>
       expect(localStorage.getItem(CONSENT_STORAGE_KEY)).toBe(

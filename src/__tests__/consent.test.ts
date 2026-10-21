@@ -17,8 +17,8 @@ describe("consent storage", () => {
   });
 
   it("persists an accepted decision in the versioned consent schema", () => {
-    storeConsent("accepted");
-    expect(getStoredConsent()).toBe("accepted");
+    storeConsent(true);
+    expect(getStoredConsent()).toEqual({ necessary: true, analytics: true });
     expect(JSON.parse(localStorage.getItem(CONSENT_STORAGE_KEY) ?? "")).toEqual({
       analytics: true,
       version: CONSENT_VERSION,
@@ -26,8 +26,8 @@ describe("consent storage", () => {
   });
 
   it("persists a rejected decision in the versioned consent schema", () => {
-    storeConsent("rejected");
-    expect(getStoredConsent()).toBe("rejected");
+    storeConsent(false);
+    expect(getStoredConsent()).toEqual({ necessary: true, analytics: false });
     expect(JSON.parse(localStorage.getItem(CONSENT_STORAGE_KEY) ?? "")).toEqual({
       analytics: false,
       version: CONSENT_VERSION,
@@ -51,11 +51,14 @@ describe("consent storage", () => {
     const handler = vi.fn();
     window.addEventListener(CONSENT_EVENT, handler);
 
-    storeConsent("accepted");
+    storeConsent(true);
 
     expect(handler).toHaveBeenCalledTimes(1);
-    const event = handler.mock.calls[0][0] as CustomEvent<string>;
-    expect(event.detail).toBe("accepted");
+    const event = handler.mock.calls[0][0] as CustomEvent<{
+      necessary: true;
+      analytics: boolean;
+    }>;
+    expect(event.detail).toEqual({ necessary: true, analytics: true });
 
     window.removeEventListener(CONSENT_EVENT, handler);
   });

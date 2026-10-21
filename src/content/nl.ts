@@ -354,9 +354,9 @@ export const nl: Content = {
       {
         heading: "Bezoekstatistieken en cookies",
         body: [
-          "Vogels Consultancy gebruikt Google Analytics 4 van Google om te begrijpen hoe de website wordt gebruikt en om deze te verbeteren. Google Analytics wordt alleen geladen nadat je toestemming hebt gegeven. Zonder toestemming wordt het Analytics-script niet geladen en worden er geen Analyticsgegevens naar Google verzonden.",
-          "Na toestemming kan Google Analytics cookies plaatsen, zoals _ga en _ga_*. Analyticsgegevens kunnen informatie bevatten over bezochte pagina's, apparaat- en browserinformatie, geschatte locatie en interacties met de website.",
-          "Je kunt je toestemming intrekken of wijzigen via Cookie-instellingen onderaan elke pagina. Na intrekking stopt toekomstige Analytics-tracking en verwijdert de website waar technisch mogelijk de bijbehorende Analytics-cookies.",
+          "De website gebruikt noodzakelijke functionaliteit en opslag om de cookievoorkeur te onthouden. Optionele analytics worden alleen ingeschakeld nadat je daarvoor toestemming hebt gegeven.",
+          "Voor analytics wordt momenteel Google Analytics 4 gebruikt, aangeboden door Google, om het gebruik en de prestaties van de website te begrijpen. Na toestemming kunnen cookies zoals _ga en _ga_* worden geplaatst.",
+          "Je kunt je toestemming op elk moment wijzigen of intrekken via Cookie-instellingen onderaan de pagina.",
         ],
       },
       {
@@ -368,11 +368,11 @@ export const nl: Content = {
     ],
   },
   cookieConsent: {
-    title: "Cookies & analytics",
-    body: "Ik gebruik Google Analytics om websitegebruik te begrijpen en de site te verbeteren. Analytics wordt alleen ingeschakeld met jouw toestemming.",
-    accept: "Accepteren",
+    title: "Cookies op deze website",
+    body: "Deze website gebruikt noodzakelijke cookies voor een goede werking en, met jouw toestemming, analytische cookies voor het meten en verbeteren van gebruik en prestaties.",
+    accept: "Toestaan",
     reject: "Weigeren",
-    moreInfo: "Meer informatie",
+    privacyPolicy: "Privacyverklaring",
     close: "Sluiten",
   },
   notFound: {
